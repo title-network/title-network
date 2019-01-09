@@ -7,11 +7,12 @@
 
 #include "crypto/common.h"
 #include "hash.h"
+#include "hash_blake2.h"
 #include "tinyformat.h"
 #include "utilstrencodings.h"
 
 uint256 CBlockHeader::GetHash() const {
-    return SerializeHash(*this);
+    return Blake2::SerializeHash(*this);
 }
 
 std::string CBlock::ToString() const {
