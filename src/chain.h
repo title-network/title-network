@@ -291,6 +291,10 @@ public:
 
     uint256 GetBlockHash() const { return *phashBlock; }
 
+    uint256 GetBlockPoWHash() const {
+        return GetBlockHeader().GetPoWHash(nHeight);
+    }
+
     int64_t GetBlockTime() const { return (int64_t)nTime; }
 
     int64_t GetBlockTimeMax() const { return (int64_t)nTimeMax; }

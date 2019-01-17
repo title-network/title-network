@@ -5,6 +5,7 @@
 
 #include "primitives/block.h"
 
+#include "chainparams.h"
 #include "crypto/common.h"
 #include "hash.h"
 #include "hash_blake2.h"
@@ -12,7 +13,15 @@
 #include "utilstrencodings.h"
 
 uint256 CBlockHeader::GetHash() const {
-    return Blake2::SerializeHash(*this);
+    return SerializeHash(*this);
+}
+
+uint256 CBlockHeader::GetPoWHash(const int nHeight) const {
+   if (nHeight > Params().GetConsensus().powBlake2Height) {
+        return Blake2::SerializeHash(*this);
+   }
+
+   return GetHash();
 }
 
 std::string CBlock::ToString() const {
