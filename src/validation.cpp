@@ -1245,7 +1245,7 @@ bool ReadBlockFromDisk(CBlock &block, const CDiskBlockPos &pos,
 
 bool ReadBlockFromDisk(CBlock &block, const CBlockIndex *pindex,
                        const Consensus::Params &consensusParams) {
-    if (!ReadBlockFromDisk(block, pindex->GetBlockPos(), consensusParams))
+    if (!ReadBlockFromDisk(block, pindex->GetBlockPos(), pindex->nHeight, consensusParams))
         return false;
     if (block.GetHash() != pindex->GetBlockHash())
         return error("ReadBlockFromDisk(CBlock&, CBlockIndex*): GetHash() "
