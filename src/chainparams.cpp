@@ -361,7 +361,7 @@ public:
         consensus.oneMinuteBlockHeight = 160;
 
         // At this height we will hardfork to Blake2b PoW algo
-        consensus.powBlake2Height = 248000;
+        consensus.powBlake2Height = 250000;
 
         pchMessageStart[0] = 0x0b;
         pchMessageStart[1] = 0x11;
