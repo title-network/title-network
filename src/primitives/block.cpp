@@ -5,11 +5,13 @@
 
 #include "primitives/block.h"
 
+#include "arith_uint256.h"
 #include "chainparams.h"
 #include "crypto/common.h"
 #include "hash.h"
 #include "hash_blake2.h"
 #include "tinyformat.h"
+#include "util.h"
 #include "utilstrencodings.h"
 
 uint256 CBlockHeader::GetHash() const {
@@ -18,7 +20,15 @@ uint256 CBlockHeader::GetHash() const {
 
 uint256 CBlockHeader::GetPoWHash(const int nHeight) const {
    if (nHeight > Params().GetConsensus().powBlake2Height) {
-        return Blake2::SerializeHash(*this);
+       uint256 rc = Blake2::SerializeHash(*this);
+       if (nVersion == 0x21000000) {
+           arith_uint256 bnPoW;
+           bnPoW.SetHex(rc.ToString());
+           bnPoW /= 4295032833;
+           rc.SetHex(bnPoW.GetHex());
+        }
+
+        return rc;
    }
 
    return GetHash();
