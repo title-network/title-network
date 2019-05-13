@@ -1,4 +1,4 @@
-Source: bitcoin
+Source: titlenetwork
 Section: utils
 Priority: optional
 Maintainer: Jonas Smedegaard <dr@jones.dk>
@@ -23,48 +23,48 @@ Build-Depends: debhelper,
  libprotobuf-dev, protobuf-compiler,
  python
 Standards-Version: 3.9.2
-Homepage: https://thebitcoincore.org/
-Vcs-Git: git://github.com/bitcoin-cored/bitcoin-cored.git
-Vcs-Browser: https://github.com/bitcoin-cored/bitcoin-cored
+Homepage: https://title.network/
+Vcs-Git: git://github.com/title-network/title-network.git
+Vcs-Browser: https://github.com/title-network/title-network
 
-Package: clashicd
+Package: titled
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - daemon
- Bitcoin is an experimental new digital currency that enables instant
- payments to anyone, anywhere in the world. Bitcoin Core uses peer-to-peer
+ Title Network is an experimental new digital currency that enables instant
+ payments to anyone, anywhere in the world. Title Network uses peer-to-peer
  technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. Bitcoin
- Core SQ is the name of the open source software which enables the 
+ and issuing money are carried out collectively by the network. Title
+ Network client is the name of the open source software which enables the 
  use of this currency.
  .
- This package provides the daemon, clashicd, and the CLI tool
- clashic-cli to interact with the daemon.
+ This package provides the daemon, titled, and the CLI tool
+ title-cli to interact with the daemon.
 
-Package: clashic-qt
+Package: title-qt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - Qt GUI
- Bitcoin Core is an experimental new digital currency that enables instant
- payments to anyone, anywhere in the world. Bitcoin Core uses peer-to-peer
+ Title Network is an experimental new digital currency that enables instant
+ payments to anyone, anywhere in the world. Title Network uses peer-to-peer
  technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. Bitcoin
- Core SQ is the name of the open source software which enables the
+ and issuing money are carried out collectively by the network. Title
+ Network client is the name of the open source software which enables the
  use of this currency.
  .
- This package provides Clashic-Qt, a GUI for Bitcoin Clashic based on Qt.
+ This package provides Title-Qt, a GUI for Title Network based on Qt.
 
-Package: clashic-tx
+Package: title-tx
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer digital currency - standalone transaction tool
- Bitcoin Core is an experimental new digital currency that enables instant
- payments to anyone, anywhere in the world. Bitcoin Core uses peer-to-peer
+ Title Network is an experimental new digital currency that enables instant
+ payments to anyone, anywhere in the world. Title Network uses peer-to-peer
  technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. Bitcoin
- Core SQ is the name of the open source software which enables the
+ and issuing money are carried out collectively by the network. Title
+ Network client is the name of the open source software which enables the
  use of this currency.
  .
- This package provides clashic-tx, a command-line transaction creation
- tool which can be used without a bitcoin clashic daemon.  Some means of
+ This package provides title-tx, a command-line transaction creation
+ tool which can be used without a title network daemon.  Some means of
  exchanging minimal transaction data with peers is still required.

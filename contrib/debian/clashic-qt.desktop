@@ -1,13 +1,13 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=Bitcoin Core Sq
-Comment=Connect to the Bitcoin Core P2P Network
-Comment[de]=Verbinde mit dem Bitcoin Core peer-to-peer Netzwerk
-Comment[fr]=Bitcoin, monnaie virtuelle cryptographique pair à pair
-Comment[tr]=Bitcoin, eşten eşe kriptografik sanal para birimi
-Exec=clashic-qt %u
+Name=Title Network
+Comment=Connect to the Title Network P2P Network
+Comment[de]=Verbinde mit dem Title Network peer-to-peer Netzwerk
+Comment[fr]=Title Network, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Title Network, eşten eşe kriptografik sanal para birimi
+Exec=title-qt %u
 Terminal=false
 Type=Application
 Icon=bitcoin128
-MimeType=x-scheme-handler/bitcoincore;
+MimeType=x-scheme-handler/titlenetwork;
 Categories=Office;Finance;
