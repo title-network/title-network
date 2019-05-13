@@ -1,9 +1,9 @@
-Contributing to Bitcoin Core Sq
+Contributing to Title Network client
 ====================================
 
-The Bitcoin Core Sq project welcomes contributors!
+The Title Network project welcomes contributors!
 
-To contribute, checkout https://thebitcoincore.org
+To contribute, checkout https://title.network
 
 
 Copyright
