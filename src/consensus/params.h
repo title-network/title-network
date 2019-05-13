@@ -61,6 +61,8 @@ struct Params {
     std::vector<uint8_t> antiReplayOpReturnCommitment;
     /** Block height at which we changed consensus to 1-minute blocks */
     int oneMinuteBlockHeight;
+    /** Block height at which we changed PoW to Blake2b */
+    int powBlake2Height;
 
     /**
      * Minimum blocks including miner confirmation of the total of 2016 blocks

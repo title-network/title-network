@@ -155,6 +155,9 @@ public:
         // At this height we will hardfork to 1-minute blocks and 30-period DAA
         consensus.oneMinuteBlockHeight = 588672;
 
+        // At this height we will hardfork to Blake2b PoW algo
+        consensus.powBlake2Height = 735000;
+
         // Take the amount of 10-minute blocks in this interval and add it
         // to the number of expected 1-minute blocks left in the orginal planned
         // interval to figure out when to cut the block subsidy. It should be more 
@@ -266,7 +269,10 @@ public:
                                   "b206b1a81849f9b10414cd")},
                 // Sept 5, 2018
                 {615385, uint256S("0x000000000000000f61a5f419643ce6c15a579f4928"
-                                  "9d6fd1b1ed521f899d44ee")}}};
+                                  "9d6fd1b1ed521f899d44ee")},
+                // Jan 17, 2019
+                {734750, uint256S("0x000000000000000eea84db6a33adefff7cdb4ee87e"
+                                  "c961a8640b0de8b0df363d")}}};
 
 
         // Data as of block
@@ -353,6 +359,9 @@ public:
  
         // At this height we will hardfork to 1-minute blocks and 30-period DAA
         consensus.oneMinuteBlockHeight = 160;
+
+        // At this height we will hardfork to Blake2b PoW algo
+        consensus.powBlake2Height = 250000;
 
         pchMessageStart[0] = 0x0b;
         pchMessageStart[1] = 0x11;
@@ -475,6 +484,9 @@ public:
 
         // 1-minute blocks are always enabled on regtest
         consensus.oneMinuteBlockHeight = 0;
+
+        // Blake2b PoW is always enabled on regtest
+        consensus.powBlake2Height = 0;
 
         pchMessageStart[0] = 0xfa;
         pchMessageStart[1] = 0xbf;

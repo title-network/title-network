@@ -1217,6 +1217,7 @@ bool WriteBlockToDisk(const CBlock &block, CDiskBlockPos &pos,
 }
 
 bool ReadBlockFromDisk(CBlock &block, const CDiskBlockPos &pos,
+                       const int nHeight,
                        const Consensus::Params &consensusParams) {
     block.SetNull();
 
@@ -1235,7 +1236,7 @@ bool ReadBlockFromDisk(CBlock &block, const CDiskBlockPos &pos,
     }
 
     // Check the header
-    if (!CheckProofOfWork(block.GetHash(), block.nBits, consensusParams))
+    if (!CheckProofOfWork(block.GetPoWHash(nHeight), block.nBits, consensusParams))
         return error("ReadBlockFromDisk: Errors in block header at %s",
                      pos.ToString());
 
@@ -1244,7 +1245,7 @@ bool ReadBlockFromDisk(CBlock &block, const CDiskBlockPos &pos,
 
 bool ReadBlockFromDisk(CBlock &block, const CBlockIndex *pindex,
                        const Consensus::Params &consensusParams) {
-    if (!ReadBlockFromDisk(block, pindex->GetBlockPos(), consensusParams))
+    if (!ReadBlockFromDisk(block, pindex->GetBlockPos(), pindex->nHeight, consensusParams))
         return false;
     if (block.GetHash() != pindex->GetBlockHash())
         return error("ReadBlockFromDisk(CBlock&, CBlockIndex*): GetHash() "
@@ -3357,9 +3358,19 @@ bool FindUndoPos(CValidationState &state, int nFile, CDiskBlockPos &pos,
 bool CheckBlockHeader(const CBlockHeader &block, CValidationState &state,
                       const Consensus::Params &consensusParams,
                       bool fCheckPOW) {
+
+    // Get prev block index
+    CBlockIndex* pindexPrev = NULL;
+    int nHeight = 0;
+    BlockMap::iterator mi = mapBlockIndex.find(block.hashPrevBlock);
+    if (mi != mapBlockIndex.end()) {
+        pindexPrev = mi->second;
+        nHeight = pindexPrev->nHeight + 1;
+    }
+
     // Check proof of work matches claimed amount
     if (fCheckPOW &&
-        !CheckProofOfWork(block.GetHash(), block.nBits, consensusParams))
+        !CheckProofOfWork(block.GetPoWHash(nHeight), block.nBits, consensusParams))
         return state.DoS(50, false, REJECT_INVALID, "high-hash", false,
                          "proof of work failed");
 
@@ -4710,7 +4721,9 @@ bool LoadExternalBlockFile(const Config &config, FILE *fileIn,
                             range.first;
                         std::shared_ptr<CBlock> pblockrecursive =
                             std::make_shared<CBlock>();
+                        const int nHeight = mapBlockIndex[it->first]->nHeight;
                         if (ReadBlockFromDisk(*pblockrecursive, it->second,
+                                              nHeight,
                                               chainparams.GetConsensus())) {
                             LogPrint(
                                 BCLog::REINDEX,
