@@ -293,6 +293,8 @@ libclashic_consensus_a_SOURCES = \
   consensus/validation.h \
   hash.cpp \
   hash.h \
+  hash_blake2.cpp \
+  hash_blake2.h \
   prevector.h \
   primitives/block.cpp \
   primitives/block.h \
@@ -498,6 +500,17 @@ CTAES_DIST += crypto/ctaes/ctaes.h
 CTAES_DIST += crypto/ctaes/README.md
 CTAES_DIST += crypto/ctaes/test.c
 
+CBLAKE2_DIST = crypto/cblake2/blake2-impl.h
+CBLAKE2_DIST += crypto/cblake2/blake2.h
+CBLAKE2_DIST += crypto/cblake2/blake2b-ref.c
+CBLAKE2_DIST += crypto/cblake2/blake2bp-ref.c
+CBLAKE2_DIST += crypto/cblake2/blake2s-ref.c
+CBLAKE2_DIST += crypto/cblake2/blake2sp-ref.c
+CBLAKE2_DIST += crypto/cblake2/blake2xb-ref.c
+CBLAKE2_DIST += crypto/cblake2/blake2xs-ref.c
+CBLAKE2_DIST += crypto/cblake2/genkat-c.c
+CBLAKE2_DIST += crypto/cblake2/genkat-json.c
+
 CLEANFILES = $(EXTRA_LIBRARIES)
 
 CLEANFILES += *.gcda *.gcno
@@ -515,7 +528,7 @@ CLEANFILES += zmq/*.gcda zmq/*.gcno
 
 DISTCLEANFILES = obj/build.h
 
-EXTRA_DIST = $(CTAES_DIST)
+EXTRA_DIST = $(CTAES_DIST) $(CBLAKE2_DIST)
 
 clean-local:
 	-$(MAKE) -C secp256k1 clean
