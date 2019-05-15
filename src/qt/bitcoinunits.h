@@ -52,7 +52,7 @@ public:
     explicit BitcoinUnits(QObject *parent);
 
     /**
-     * Bitcoin units (Bitcoin Clashic unit work the same as Bitcoin).
+     * Bitcoin units (Title Network unit work the same as Bitcoin).
      * @note Source: https://en.bitcoin.it/wiki/Units.
      * Please add only sensible ones.
      */

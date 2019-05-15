@@ -1,4 +1,4 @@
-Bitcoin Core SQ Release Process
+Title Network Release Process
 ===============================
 
 
@@ -43,21 +43,21 @@ Bitcoin Core SQ Release Process
     
 7. Verify matching gitian builds, gather signatures
 
-8. Upload gitian build to [thebitcoincore.org](https://thebitcoincore.org/)
+8. Upload gitian build to [title.network](https://title.network/)
 
 9. Re-verify the uploads (make sure that downloading them, their checksums are ok)
 
-10. Create a [GitHub release](https://github.com/bitcoin-cored/bitcoin-cored/releases) 
+10. Create a [GitHub release](https://github.com/title-network/title-network/releases)
 
 
 ## After Release
 
-11. Update version number on www.thebitcoincore.org
+11. Update version number on title.network
 
 12. Publish signed checksums (various places, e.g. blog, reddit/r/BitcoinABC)
 
 13. Announce Release:
-    - [Reddit](https://www.reddit.com/r/BitcoinABC/)
-    - Twitter @BitcoinClashic
-    - Public slack channels friendly to Bitcoin Core SQ announcements 
-      (eg. #abc-announce on BTCforks,  #hardfork on BTCchat)
+    - [Reddit](https://www.reddit.com/r/TitleNetwork/)
+    - Twitter @title_network
+    - Public slack channels friendly to Title Network announcements 
+      (eg. #title-announce on BTCforks)
