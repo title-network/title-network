@@ -55,6 +55,7 @@ NODE_WITNESS = (1 << 3)
 NODE_XTHIN = (1 << 4)
 NODE_BITCOIN_CASH = (1 << 5)
 NODE_BITCOIN_CORE = (1 << 6)
+NODE_TITLE = (1 << 7)
 
 # Howmuch data will be read from the network at once
 READ_BUFFER_SIZE = 8192

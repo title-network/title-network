@@ -16,7 +16,7 @@
 
 #define MIN_RETRY 1000
 
-#define REQUIRE_VERSION 70001
+#define REQUIRE_VERSION 80030
 
 static inline int GetRequireHeight(const bool testnet = fTestNet) {
     return testnet ? 500000 : 350000;
@@ -114,7 +114,8 @@ public:
     bool IsGood() const {
         if (ip.GetPort() != GetDefaultPort()) return false;
         if (!(services & NODE_NETWORK)) return false;
-        if (!(services & NODE_BITCOIN_CORE)) return false;
+        if (!(services & NODE_BITCOIN_CORE) ||
+             (services & NODE_TITLE))) return false;
         if (!ip.IsRoutable()) return false;
         if (clientVersion && clientVersion < REQUIRE_VERSION) return false;
         if (blocks && blocks < GetRequireHeight()) return false;

@@ -64,7 +64,7 @@ class ABCD_RPC_Test (BitcoinTestFramework):
         ebs = getsize['excessiveBlockSize']
         assert_equal(ebs, 2 * ONE_MEGABYTE)
         # Check for EB correctness in the subver string
-        self.check_subversion("/Bitcoin Core SQ:.*\(EB2\.0; .*\)/")
+        self.check_subversion("/Title Network:.*\(EB2\.0; .*\)/")
 
         # Check setting to 13MB
         self.nodes[0].setexcessiveblock(13 * ONE_MEGABYTE)
@@ -72,7 +72,7 @@ class ABCD_RPC_Test (BitcoinTestFramework):
         ebs = getsize['excessiveBlockSize']
         assert_equal(ebs, 13 * ONE_MEGABYTE)
         # Check for EB correctness in the subver string
-        self.check_subversion("/Bitcoin Core SQ:.*\(EB13\.0; .*\)/")
+        self.check_subversion("/Title Network:.*\(EB13\.0; .*\)/")
 
         # Check setting to 13.14MB
         self.nodes[0].setexcessiveblock(13140000)
@@ -80,7 +80,7 @@ class ABCD_RPC_Test (BitcoinTestFramework):
         ebs = getsize['excessiveBlockSize']
         assert_equal(ebs, 13.14 * ONE_MEGABYTE)
         # check for EB correctness in the subver string
-        self.check_subversion("/Bitcoin Core SQ:.*\(EB13\.1; .*\)/")
+        self.check_subversion("/Title Network:.*\(EB13\.1; .*\)/")
 
     def test_coreservicebit(self):
         # Check that NODE_BITCOIN_CORE bit is set.
@@ -89,6 +89,14 @@ class ABCD_RPC_Test (BitcoinTestFramework):
         nw_info = node.getnetworkinfo()
         assert_equal(int(nw_info['localservices'], 16) & NODE_BITCOIN_CORE,
                      NODE_BITCOIN_CORE)
+
+    def test_titleservicebit(self):
+        # Check that NODE_TITLE bit is set.
+        # This can be seen in the 'localservices' entry of getnetworkinfo RPC.
+        node = self.nodes[0]
+        nw_info = node.getnetworkinfo()
+        assert_equal(int(nw_info['localservices'], 16) & NODE_TITLE,
+                     NODE_TITLE)
 
     def run_test(self):
         self.genesis_hash = int(self.nodes[0].getbestblockhash(), 16)

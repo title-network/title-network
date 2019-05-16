@@ -925,6 +925,9 @@ QString formatServicesStr(quint64 mask) {
                 case NODE_BITCOIN_CORE:
                     strList.append("CORE");
                     break;
+                case NODE_TITLE:
+                    strList.append("TITLE");
+                    break;
                 default:
                     strList.append(QString("%1[%2]").arg("UNKNOWN").arg(check));
             }

@@ -1038,7 +1038,7 @@ void ThreadImport(const Config &config,
 }
 
 /** Sanity checks
- *  Ensure that Bitcoin ABCD is running in a usable environment with all
+ *  Ensure that Title Network is running in a usable environment with all
  *  necessary library support.
  */
 bool InitSanityCheck(void) {
@@ -1520,13 +1520,15 @@ bool AppInitParameterInteraction(Config &config) {
     if (GetBoolArg("-peerbloomfilters", DEFAULT_PEERBLOOMFILTERS))
         nLocalServices = ServiceFlags(nLocalServices | NODE_BLOOM);
 
-    // Signal Bitcoin Cash support.
-    // TODO: remove some time after the hardfork when no longer needed
-    // to differentiate the network nodes.
     nLocalServices = ServiceFlags(nLocalServices | NODE_BITCOIN_CORE);
 
-    // Preferentially keep peers which service NODE_BITCOIN_CASH
-    nRelevantServices = ServiceFlags(nRelevantServices | NODE_BITCOIN_CORE);
+    // Signal Title Network support.
+    // TODO: remove some time after the hardfork when no longer needed
+    // to differentiate the network nodes.
+    nLocalServices = ServiceFlags(nLocalServices | NODE_TITLE);
+
+    // Preferentially keep peers which service NODE_TITLE
+    nRelevantServices = ServiceFlags(nRelevantServices | NODE_TITLE);
 
     nMaxTipAge = GetArg("-maxtipage", DEFAULT_MAX_TIP_AGE);
 
