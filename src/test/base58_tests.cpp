@@ -10,7 +10,7 @@
 
 #include "key.h"
 #include "script/script.h"
-#include "test/test_clashic.h"
+#include "test/test_title.h"
 #include "uint256.h"
 #include "util.h"
 #include "utilstrencodings.h"

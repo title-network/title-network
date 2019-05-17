@@ -8,7 +8,7 @@
 #include "consensus/merkle.h"
 #include "random.h"
 
-#include "test/test_clashic.h"
+#include "test/test_title.h"
 
 #include <boost/test/unit_test.hpp>
 

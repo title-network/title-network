@@ -10,7 +10,7 @@
 #include "script/script.h"
 #include "script/script_error.h"
 #include "script/sign.h"
-#include "test/test_clashic.h"
+#include "test/test_title.h"
 #include "validation.h"
 
 #include <vector>

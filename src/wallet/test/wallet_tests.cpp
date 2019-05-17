@@ -6,7 +6,7 @@
 
 #include "config.h"
 #include "rpc/server.h"
-#include "test/test_clashic.h"
+#include "test/test_title.h"
 #include "validation.h"
 #include "wallet/rpcdump.h"
 #include "wallet/test/wallet_test_fixture.h"

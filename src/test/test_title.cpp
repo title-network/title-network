@@ -4,7 +4,7 @@
 
 #define BOOST_TEST_MODULE Bitcoin Test Suite
 
-#include "test_clashic.h"
+#include "test_title.h"
 
 #include "chainparams.h"
 #include "config.h"
