@@ -1,5 +1,5 @@
-#ifndef CLASHIC_SEEDER_DB_H
-#define CLASHIC_SEEDER_DB_H
+#ifndef TITLE_SEEDER_DB_H
+#define TITLE_SEEDER_DB_H
 
 #include "netbase.h"
 #include "protocol.h"

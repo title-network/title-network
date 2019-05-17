@@ -1,5 +1,5 @@
-#ifndef CLASHIC_SEEDER_DNS_H
-#define CLASHIC_SEEDER_DNS_H 1
+#ifndef TITLE_SEEDER_DNS_H
+#define TITLE_SEEDER_DNS_H 1
 
 #include <stdint.h>
 

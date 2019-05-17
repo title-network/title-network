@@ -686,7 +686,7 @@ int main(int argc, char *argv[]) {
         return EXIT_FAILURE;
     }
     try {
-        ReadConfigFile(GetArg("-conf", CLASHIC_CONF_FILENAME));
+        ReadConfigFile(GetArg("-conf", TITLE_CONF_FILENAME));
     } catch (const std::exception &e) {
         QMessageBox::critical(
             0, QObject::tr(PACKAGE_NAME),
@@ -740,7 +740,7 @@ int main(int argc, char *argv[]) {
     if (PaymentServer::ipcSendCommandLine()) exit(EXIT_SUCCESS);
 
     // Start up the payment server early, too, so impatient users that click on
-    // bitcoinclashic: links repeatedly have their payment requests routed to
+    // titlenetwork: links repeatedly have their payment requests routed to
     // this process:
     app.createPaymentServer();
 #endif

@@ -77,7 +77,7 @@ bool AppInit(int argc, char *argv[]) {
     //
     // Parameters
     //
-    // If Qt is used, parameters/clashic.conf are parsed in qt/bitcoin.cpp's
+    // If Qt is used, parameters/title.conf are parsed in qt/bitcoin.cpp's
     // main()
     ParseParameters(argc, argv);
 
@@ -92,10 +92,10 @@ bool AppInit(int argc, char *argv[]) {
             strUsage += FormatParagraph(LicenseInfo());
         } else {
             strUsage += "\n" + _("Usage:") + "\n" +
-                        "  clashicd [options]                     " +
+                        "  titled [options]                     " +
                         strprintf(_("Start %s Daemon"), _(PACKAGE_NAME)) + "\n";
 
-            strUsage += "\n" + HelpMessage(HMM_CLASHICD);
+            strUsage += "\n" + HelpMessage(HMM_TITLED);
         }
 
         fprintf(stdout, "%s", strUsage.c_str());
@@ -110,7 +110,7 @@ bool AppInit(int argc, char *argv[]) {
             return false;
         }
         try {
-            ReadConfigFile(GetArg("-conf", CLASHIC_CONF_FILENAME));
+            ReadConfigFile(GetArg("-conf", TITLE_CONF_FILENAME));
         } catch (const std::exception &e) {
             fprintf(stderr, "Error reading configuration file: %s\n", e.what());
             return false;
@@ -133,11 +133,11 @@ bool AppInit(int argc, char *argv[]) {
 
         if (fCommandLine) {
             fprintf(stderr, "Error: There is no RPC client functionality in "
-                            "clashicd anymore. Use the clashic-cli utility "
+                            "titled anymore. Use the title-cli utility "
                             "instead.\n");
             exit(EXIT_FAILURE);
         }
-        // -server defaults to true for clashicd but not for the GUI so do this
+        // -server defaults to true for titled but not for the GUI so do this
         // here
         SoftSetBoolArg("-server", true);
         // Set this early so that parameter interactions go to console
@@ -160,7 +160,7 @@ bool AppInit(int argc, char *argv[]) {
         }
         if (GetBoolArg("-daemon", false)) {
 #if HAVE_DECL_DAEMON
-            fprintf(stdout, "Bitcoin server starting\n");
+            fprintf(stdout, "Title Netork server starting\n");
 
             // Daemonize
             if (daemon(1, 0)) {
@@ -201,7 +201,7 @@ bool AppInit(int argc, char *argv[]) {
 int main(int argc, char *argv[]) {
     SetupEnvironment();
 
-    // Connect clashicd signal handlers
+    // Connect titled signal handlers
     noui_connect();
 
     return (AppInit(argc, argv) ? EXIT_SUCCESS : EXIT_FAILURE);

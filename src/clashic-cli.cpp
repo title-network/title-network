@@ -34,7 +34,7 @@ std::string HelpMessageCli() {
     strUsage += HelpMessageOpt("-?", _("This help message"));
     strUsage += HelpMessageOpt(
         "-conf=<file>", strprintf(_("Specify configuration file (default: %s)"),
-                                  CLASHIC_CONF_FILENAME));
+                                  TITLE_CONF_FILENAME));
     strUsage += HelpMessageOpt("-datadir=<dir>", _("Specify data directory"));
     AppendParamsHelpMessages(strUsage);
     strUsage += HelpMessageOpt(
@@ -100,14 +100,14 @@ static int AppInitRPC(int argc, char *argv[]) {
         if (!IsArgSet("-version")) {
             strUsage +=
                 "\n" + _("Usage:") + "\n" +
-                "  clashic-cli [options] <command> [params]  " +
+                "  title-cli [options] <command> [params]  " +
                 strprintf(_("Send command to %s"), _(PACKAGE_NAME)) + "\n" +
-                "  clashic-cli [options] -named <command> [name=value] ... " +
+                "  title-cli [options] -named <command> [name=value] ... " +
                 strprintf(_("Send command to %s (with named arguments)"),
                           _(PACKAGE_NAME)) +
-                "\n" + "  clashic-cli [options] help                " +
+                "\n" + "  title-cli [options] help                " +
                 _("List commands") + "\n" +
-                "  clashic-cli [options] help <command>      " +
+                "  title-cli [options] help <command>      " +
                 _("Get help for a command") + "\n";
 
             strUsage += "\n" + HelpMessageCli();
@@ -127,7 +127,7 @@ static int AppInitRPC(int argc, char *argv[]) {
         return EXIT_FAILURE;
     }
     try {
-        ReadConfigFile(GetArg("-conf", CLASHIC_CONF_FILENAME));
+        ReadConfigFile(GetArg("-conf", TITLE_CONF_FILENAME));
     } catch (const std::exception &e) {
         fprintf(stderr, "Error reading configuration file: %s\n", e.what());
         return EXIT_FAILURE;
@@ -239,7 +239,7 @@ UniValue CallRPC(const std::string &strMethod, const UniValue &params) {
                 _("Could not locate RPC credentials. No authentication cookie "
                   "could be found, and no rpcpassword is set in the "
                   "configuration file (%s)"),
-                GetConfigFile(GetArg("-conf", CLASHIC_CONF_FILENAME))
+                GetConfigFile(GetArg("-conf", TITLE_CONF_FILENAME))
                     .string()
                     .c_str()));
         }

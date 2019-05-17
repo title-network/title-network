@@ -7,8 +7,8 @@
 #error This header can only be compiled as C++.
 #endif
 
-#ifndef CLASHIC_SEEDER_PROTOCOL_H
-#define CLASHIC_SEEDER_PROTOCOL_H
+#ifndef TITLE_SEEDER_PROTOCOL_H
+#define TITLE_SEEDER_PROTOCOL_H
 
 #include "netbase.h"
 #include "serialize.h"

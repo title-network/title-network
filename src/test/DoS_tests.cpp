@@ -15,7 +15,7 @@
 #include "util.h"
 #include "validation.h"
 
-#include "test/test_clashic.h"
+#include "test/test_title.h"
 
 #include <cstdint>
 
