@@ -53,11 +53,11 @@ static int AppInitRawTx(int argc, char *argv[]) {
     if (argc < 2 || IsArgSet("-?") || IsArgSet("-h") || IsArgSet("-help")) {
         // First part of help message is specific to this utility
         std::string strUsage =
-            strprintf(_("%s clashic-tx utility version"), _(PACKAGE_NAME)) +
+            strprintf(_("%s title-tx utility version"), _(PACKAGE_NAME)) +
             " " + FormatFullVersion() + "\n\n" + _("Usage:") + "\n" +
-            "  clashic-tx [options] <hex-tx> [commands]  " +
+            "  title-tx [options] <hex-tx> [commands]  " +
             _("Update hex-encoded bitcoin transaction") + "\n" +
-            "  clashic-tx [options] -create [commands]   " +
+            "  title-tx [options] -create [commands]   " +
             _("Create hex-encoded bitcoin transaction") + "\n" + "\n";
 
         fprintf(stdout, "%s", strUsage.c_str());

@@ -1,9 +1,9 @@
 .PHONY: FORCE
 all: FORCE
-	$(MAKE) -C .. clashic_qt test_clashic_qt
+	$(MAKE) -C .. title_qt test_title_qt
 clean: FORCE
-	$(MAKE) -C .. clashic_qt_clean test_clashic_qt_clean
+	$(MAKE) -C .. title_qt_clean test_title_qt_clean
 check: FORCE
-	$(MAKE) -C .. test_clashic_qt_check
-clashic-qt clashic-qt.exe: FORCE
-	 $(MAKE) -C .. clashic_qt
+	$(MAKE) -C .. test_title_qt_check
+title-qt title-qt.exe: FORCE
+	 $(MAKE) -C .. title_qt

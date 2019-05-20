@@ -16,14 +16,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Bitcoin Clashic"
-            VALUE "FileDescription",    "clashicd (Bitcoin ABCD node with a JSON-RPC server)"
+            VALUE "CompanyName",        "Title Network"
+            VALUE "FileDescription",    "title-tx (CLI Title Network transaction editor utility)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "clashicd"
+            VALUE "InternalName",       "title-tx"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "clashicd.exe"
-            VALUE "ProductName",        "clashicd"
+            VALUE "OriginalFilename",   "title-tx.exe"
+            VALUE "ProductName",        "title-tx"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END
