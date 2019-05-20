@@ -13,17 +13,17 @@ BitcoinUnits::BitcoinUnits(QObject *parent)
 
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits() {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(BTCC);
-    unitlist.append(mBTCC);
-    unitlist.append(uBTCC);
+    unitlist.append(TNET);
+    unitlist.append(mTNET);
+    unitlist.append(uTNET);
     return unitlist;
 }
 
 bool BitcoinUnits::valid(int unit) {
     switch (unit) {
-        case BTCC:
-        case mBTCC:
-        case uBTCC:
+        case TNET:
+        case mTNET:
+        case uTNET:
             return true;
         default:
             return false;
@@ -32,12 +32,12 @@ bool BitcoinUnits::valid(int unit) {
 
 QString BitcoinUnits::name(int unit) {
     switch (unit) {
-        case BTCC:
-            return QString("BTCC");
-        case mBTCC:
-            return QString("mBTCC");
-        case uBTCC:
-            return QString::fromUtf8("μBTCC");
+        case TNET:
+            return QString("TNET");
+        case mTNET:
+            return QString("mTNET");
+        case uTNET:
+            return QString::fromUtf8("μTNET");
         default:
             return QString("???");
     }
@@ -45,11 +45,11 @@ QString BitcoinUnits::name(int unit) {
 
 QString BitcoinUnits::description(int unit) {
     switch (unit) {
-        case BTCC:
+        case TNET:
             return QString("Bitcoins");
-        case mBTCC:
+        case mTNET:
             return QString("Milli-Bitcoins (1 / 1" THIN_SP_UTF8 "000)");
-        case uBTCC:
+        case uTNET:
             return QString("Micro-Bitcoins (1 / 1" THIN_SP_UTF8
                            "000" THIN_SP_UTF8 "000)");
         default:
@@ -59,11 +59,11 @@ QString BitcoinUnits::description(int unit) {
 
 qint64 BitcoinUnits::factor(int unit) {
     switch (unit) {
-        case BTCC:
+        case TNET:
             return 100000000;
-        case mBTCC:
+        case mTNET:
             return 100000;
-        case uBTCC:
+        case uTNET:
             return 100;
         default:
             return 100000000;
@@ -72,11 +72,11 @@ qint64 BitcoinUnits::factor(int unit) {
 
 int BitcoinUnits::decimals(int unit) {
     switch (unit) {
-        case BTCC:
+        case TNET:
             return 8;
-        case mBTCC:
+        case mTNET:
             return 5;
-        case uBTCC:
+        case uTNET:
             return 2;
         default:
             return 0;

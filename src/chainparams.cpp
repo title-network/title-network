@@ -166,7 +166,7 @@ public:
         // ie. (((586656 -(210000*2))+(((210000*3)-586656)*10)))=166656+(43344*10)
         // so this interval would be 581952 blocks past last halving
         // which means 12.5 / 10 / 2 block rewards at a height of 210000 * 2 + 581952
-        // or halve to 0.625 BTCC at height 1,001,952
+        // or halve to 0.625 TNET at height 1,001,952
         consensus.nSubsidyHalvingIntervalOneMinuteAdjustment =
             (((consensus.oneMinuteBlockHeight - (210000 * 2)) + 
             (((210000 * 3) - consensus.oneMinuteBlockHeight) * 10)));
@@ -214,7 +214,7 @@ public:
         base58Prefixes[SECRET_KEY] = std::vector<uint8_t>(1, 128);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x88, 0xAD, 0xE4};
-        coreaddrPrefix = "bitcoincore";
+        titleaddrPrefix = "tnet";
 
         vFixedSeeds = std::vector<SeedSpec6>(
             pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
@@ -405,7 +405,7 @@ public:
         base58Prefixes[SECRET_KEY] = std::vector<uint8_t>(1, 239);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
-        coreaddrPrefix = "btcctest";
+        titleaddrPrefix = "tnettest";
         vFixedSeeds = std::vector<SeedSpec6>(
             pnSeed6_test, pnSeed6_test + ARRAYLEN(pnSeed6_test));
 
@@ -533,7 +533,7 @@ public:
         base58Prefixes[SECRET_KEY] = std::vector<uint8_t>(1, 239);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
-        coreaddrPrefix = "btccreg";
+        titleaddrPrefix = "tnetreg";
     }
 
     void UpdateBIP9Parameters(Consensus::DeploymentPos d, int64_t nStartTime,

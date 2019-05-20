@@ -56,7 +56,7 @@ public:
      * @note Source: https://en.bitcoin.it/wiki/Units.
      * Please add only sensible ones.
      */
-    enum Unit { BTCC, mBTCC, uBTCC };
+    enum Unit { TNET, mTNET, uTNET };
 
     enum SeparatorStyle { separatorNever, separatorStandard, separatorAlways };
 
