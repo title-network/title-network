@@ -19,11 +19,11 @@ pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = libtitleconsensus.pc
 endif
 
-TITLED_BIN=$(top_builddir)/src/$(BITCOIN_DAEMON_NAME)$(EXEEXT)
+TITLED_BIN=$(top_builddir)/src/$(TITLE_DAEMON_NAME)$(EXEEXT)
 TITLE_QT_BIN=$(top_builddir)/src/qt/$(TITLE_GUI_NAME)$(EXEEXT)
 TITLE_CLI_BIN=$(top_builddir)/src/$(TITLE_CLI_NAME)$(EXEEXT)
 TITLE_SEEDER_BIN=$(top_builddir)/src/$(TITLE_SEEDER_NAME)$(EXEEXT)
-BITCOIN_WIN_INSTALLER=$(PACKAGE)-$(PACKAGE_VERSION)-win$(WINDOWS_BITS)-setup$(EXEEXT)
+TITLE_WIN_INSTALLER=$(PACKAGE)-$(PACKAGE_VERSION)-win$(WINDOWS_BITS)-setup$(EXEEXT)
 
 empty :=
 space := $(empty) $(empty)
@@ -70,7 +70,7 @@ COVERAGE_INFO = baseline_filtered_combined.info baseline.info \
 dist-hook:
 	-$(GIT) archive --format=tar HEAD -- src/clientversion.cpp | $(AMTAR) -C $(top_distdir) -xf -
 
-$(BITCOIN_WIN_INSTALLER): all-recursive
+$(TITLE_WIN_INSTALLER): all-recursive
 	$(MKDIR_P) $(top_builddir)/release
 	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM) $(TITLED_BIN) $(top_builddir)/release
 	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM) $(TITLE_QT_BIN) $(top_builddir)/release
@@ -159,7 +159,7 @@ appbundle: $(OSX_APP_BUILT)
 deploy: $(OSX_DMG)
 endif
 if TARGET_WINDOWS
-deploy: $(BITCOIN_WIN_INSTALLER)
+deploy: $(TITLE_WIN_INSTALLER)
 endif
 
 $(TITLE_QT_BIN): FORCE
@@ -231,7 +231,7 @@ dist_noinst_SCRIPTS = autogen.sh
 
 EXTRA_DIST = $(top_srcdir)/share/genbuild.sh qa/pull-tester/rpc-tests.py qa/rpc-tests $(DIST_CONTRIB) $(DIST_DOCS) $(WINDOWS_PACKAGING) $(OSX_PACKAGING) $(BIN_CHECKS)
 
-CLEANFILES = $(OSX_DMG) $(BITCOIN_WIN_INSTALLER)
+CLEANFILES = $(OSX_DMG) $(TITLE_WIN_INSTALLER)
 
 # This file is problematic for out-of-tree builds if it exists.
 DISTCLEANFILES = qa/pull-tester/tests_config.pyc
