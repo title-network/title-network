@@ -50,9 +50,9 @@ Possible options, which apply to each individual test run:
 
 ```
   -h, --help            show this help message and exit
-  --nocleanup           Leave clashicds and test.* datadir on exit or error
-  --noshutdown          Don't stop clashicds after the test execution
-  --srcdir=SRCDIR       Source directory containing clashicd/clashic-cli
+  --nocleanup           Leave titleds and test.* datadir on exit or error
+  --noshutdown          Don't stop titleds after the test execution
+  --srcdir=SRCDIR       Source directory containing titled/title-cli
                         (default: ../../src)
   --tmpdir=TMPDIR       Root directory for datadirs
   --tracerpc            Print out all RPC calls as they are made
@@ -77,7 +77,7 @@ to recover with:
 
 ```bash
 rm -rf cache
-killall clashicd
+killall titled
 ```
 
 Writing tests

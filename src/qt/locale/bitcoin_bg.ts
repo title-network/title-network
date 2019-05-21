@@ -62,11 +62,11 @@
         <translation>Адреси за получаване</translation>
     </message>
     <message>
-        <source>These are your Bitcoin Core addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Title Network addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Това са адресите на получателите на плащания. Винаги проверявайте размера на сумата и адреса на получателя, преди да изпратите монети.</translation>
     </message>
     <message>
-        <source>These are your Bitcoin Core addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your Title Network addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>Това са Вашите Биткойн адреси,благодарение на които ще получавате плащания.Препоръчително е да използвате нови адреси за получаване на всяка транзакция.</translation>
     </message>
     <message>
@@ -318,7 +318,7 @@
         <translation>Повторно индексиране на блоковете на диска...</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin Core address</source>
+        <source>Send coins to a Title Network address</source>
         <translation>Изпращане към Биткоин адрес</translation>
     </message>
     <message>
@@ -2346,7 +2346,7 @@
         <translation>Въведете Ваш публичен адрес</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
+        <source>Title Network</source>
         <translation>Биткойн ядро</translation>
     </message>
     <message>

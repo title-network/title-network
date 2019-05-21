@@ -1,5 +1,5 @@
 [Protocol]
-exec=clashic-qt '%u'
+exec=title-qt '%u'
 protocol=bitcoin
 input=none
 output=none
