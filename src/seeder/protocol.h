@@ -65,7 +65,7 @@ enum ServiceFlags : uint64_t {
     NODE_BLOOM = (1 << 2),
     NODE_XTHIN = (1 << 4),
     NODE_BITCOIN_CORE = (1 << 6),
-    NODE_TILE = (1 << 7),
+    NODE_TITLE = (1 << 7),
 };
 
 class CAddress : public CService {
