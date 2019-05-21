@@ -1,0 +1,67 @@
+#!/bin/bash
+#
+#  titled The bitcoin core server.
+#
+#
+# chkconfig: 345 80 20
+# description: titled
+# processname: titled
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/titled, see below
+if [ -f /etc/sysconfig/titled ]; then
+        . /etc/sysconfig/titled
+fi
+
+RETVAL=0
+
+prog=titled
+# you can override the lockfile via TITLED_LOCKFILE in /etc/sysconfig/titled
+lockfile=${TITLED_LOCKFILE-/var/lock/subsys/titled}
+
+# titled defaults to /usr/bin/titled, override with TITLED_BIN
+titled=${TITLED_BIN-/usr/bin/titled}
+
+# titled opts default to -disablewallet, override with TITLED_OPTS
+titled_opts=${TITLED_OPTS--disablewallet}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $titled $titled_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac

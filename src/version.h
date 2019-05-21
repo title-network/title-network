@@ -8,16 +8,13 @@
 /**
  * network protocol versioning
  */
-static const int PROTOCOL_VERSION = 80030;
+static const int PROTOCOL_VERSION = 80050;
 
 //! initial proto version, to be increased after version/verack negotiation
 static const int INIT_PROTO_VERSION = 209;
 
 //! In this version, 'getheaders' was introduced.
 static const int GETHEADERS_VERSION = 31800;
-
-//! disconnect from peers older than this proto version
-static const int MIN_PEER_PROTO_VERSION = GETHEADERS_VERSION;
 
 //! nTime field added to CAddress, starting with this version;
 //! if possible, avoid requesting addresses nodes older than this
@@ -50,5 +47,11 @@ static const int INVALID_CB_NO_BAN_VERSION = 70015;
 //! This version reduces block time from 10-mins to 1-min
 //! And replaces 144-period DAA with 30-period DAA
 static const int ONE_MINUTE_BLOCKS_VERSION = 80030;
+
+//! disconnect from peers older than this proto version
+static const int MIN_PEER_PROTO_VERSION = ONE_MINUTE_BLOCKS_VERSION;
+
+//! This version introduces Blake2b as default PoW Algorithm
+static const int POW_CHANGE_BLAKE2B_VERSION = 80050;
 
 #endif // BITCOIN_VERSION_H

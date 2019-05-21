@@ -6,7 +6,7 @@
 #include "chain.h"
 #include "chainparams.h"
 #include "random.h"
-#include "test/test_clashic.h"
+#include "test/test_title.h"
 #include "util.h"
 
 #include <boost/test/unit_test.hpp>

@@ -2,41 +2,41 @@
 
 # backward compatibility for existing gentoo layout 
 #
-if [ -d "/var/lib/clashicd/.clashic" ]; then
-	CLASHICD_DEFAULT_DATADIR="/var/lib/clashicd/.clashic"
+if [ -d "/var/lib/titled/.title" ]; then
+	TITLED_DEFAULT_DATADIR="/var/lib/titled/.title"
 else
-	CLASHICD_DEFAULT_DATADIR="/var/lib/clashicd"
+	TITLED_DEFAULT_DATADIR="/var/lib/titled"
 fi
 
-CLASHICD_CONFIGFILE=${CLASHICD_CONFIGFILE:-/etc/clashic/clashic.conf}
-CLASHICD_PIDDIR=${CLASHICD_PIDDIR:-/var/run/clashicd}
-CLASHICD_PIDFILE=${CLASHICD_PIDFILE:-${CLASHICD_PIDDIR}/clashicd.pid}
-CLASHICD_DATADIR=${CLASHICD_DATADIR:-${CLASHICD_DEFAULT_DATADIR}}
-CLASHICD_USER=${CLASHICD_USER:-${BITCOIN_USER:-bitcoin}}
-CLASHICD_GROUP=${CLASHICD_GROUP:-bitcoin}
-CLASHICD_BIN=${CLASHICD_BIN:-/usr/bin/clashicd}
-CLASHICD_NICE=${CLASHICD_NICE:-${NICELEVEL:-0}}
-CLASHICD_OPTS="${CLASHICD_OPTS:-${BITCOIN_OPTS}}"
+TITLED_CONFIGFILE=${TITLED_CONFIGFILE:-/etc/title/title.conf}
+TITLED_PIDDIR=${TITLED_PIDDIR:-/var/run/titled}
+TITLED_PIDFILE=${TITLED_PIDFILE:-${TITLED_PIDDIR}/titled.pid}
+TITLED_DATADIR=${TITLED_DATADIR:-${TITLED_DEFAULT_DATADIR}}
+TITLED_USER=${TITLED_USER:-${BITCOIN_USER:-bitcoin}}
+TITLED_GROUP=${TITLED_GROUP:-bitcoin}
+TITLED_BIN=${TITLED_BIN:-/usr/bin/titled}
+TITLED_NICE=${TITLED_NICE:-${NICELEVEL:-0}}
+TITLED_OPTS="${TITLED_OPTS:-${BITCOIN_OPTS}}"
 
-name="Bitcoin Clashic ABCD Daemon"
-description="Bitcoin cryptocurrency P2P network daemon"
+name="Title Network Daemon"
+description="Title Network cryptocurrency P2P network daemon"
 
-command="/usr/bin/clashicd"
-command_args="-pid=\"${CLASHICD_PIDFILE}\" \
-		-conf=\"${CLASHICD_CONFIGFILE}\" \
-		-datadir=\"${CLASHICD_DATADIR}\" \
+command="/usr/bin/titled"
+command_args="-pid=\"${TITLED_PIDFILE}\" \
+		-conf=\"${TITLED_CONFIGFILE}\" \
+		-datadir=\"${TITLED_DATADIR}\" \
 		-daemon \
-		${CLASHICD_OPTS}"
+		${TITLED_OPTS}"
 
-required_files="${CLASHICD_CONFIGFILE}"
-start_stop_daemon_args="-u ${CLASHICD_USER} \
-			-N ${CLASHICD_NICE} -w 2000"
-pidfile="${CLASHICD_PIDFILE}"
+required_files="${TITLED_CONFIGFILE}"
+start_stop_daemon_args="-u ${TITLED_USER} \
+			-N ${TITLED_NICE} -w 2000"
+pidfile="${TITLED_PIDFILE}"
 
 # The retry schedule to use when stopping the daemon. Could be either
 # a timeout in seconds or multiple signal/timeout pairs (like
 # "SIGKILL/180 SIGTERM/300")
-retry="${CLASHICD_SIGTERM_TIMEOUT}"
+retry="${TITLED_SIGTERM_TIMEOUT}"
 
 depend() {
 	need localmount net
@@ -50,29 +50,29 @@ start_pre() {
 	checkpath \
 	-d \
 	--mode 0750 \
-	--owner "${CLASHICD_USER}:${CLASHICD_GROUP}" \
-	"${CLASHICD_DATADIR}"
+	--owner "${TITLED_USER}:${TITLED_GROUP}" \
+	"${TITLED_DATADIR}"
 
 	checkpath \
 	-d \
 	--mode 0755 \
-	--owner "${CLASHICD_USER}:${CLASHICD_GROUP}" \
-	"${CLASHICD_PIDDIR}"
+	--owner "${TITLED_USER}:${TITLED_GROUP}" \
+	"${TITLED_PIDDIR}"
 
 	checkpath -f \
-	-o ${CLASHICD_USER}:${CLASHICD_GROUP} \
+	-o ${TITLED_USER}:${TITLED_GROUP} \
 	-m 0660 \
-	${CLASHICD_CONFIGFILE}
+	${TITLED_CONFIGFILE}
 
 	checkconfig || return 1
 }
 
 checkconfig()
 {
-	if ! grep -qs '^rpcpassword=' "${CLASHICD_CONFIGFILE}" ; then
+	if ! grep -qs '^rpcpassword=' "${TITLED_CONFIGFILE}" ; then
 		eerror ""
-		eerror "ERROR: You must set a secure rpcpassword to run clashicd."
-		eerror "The setting must appear in ${CLASHICD_CONFIGFILE}"
+		eerror "ERROR: You must set a secure rpcpassword to run titled."
+		eerror "The setting must appear in ${TITLED_CONFIGFILE}"
 		eerror ""
 		eerror "This password is security critical to securing wallets "
 		eerror "and must not be the same as the rpcuser setting."
@@ -84,7 +84,7 @@ checkconfig()
 		eerror "It is also recommended that you also set alertnotify so you are "
 		eerror "notified of problems:"
 		eerror ""
-		eerror "ie: alertnotify=echo %%s | mail -s \"Bitcoin Clashic Alert\"" \
+		eerror "ie: alertnotify=echo %%s | mail -s \"Title Network Alert\"" \
 			"admin@foo.com"
 		eerror ""
 		return 1

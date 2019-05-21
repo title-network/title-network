@@ -111,8 +111,8 @@ class AcceptBlockTest(BitcoinTestFramework):
 
     def add_options(self, parser):
         parser.add_option("--testbinary", dest="testbinary",
-                          default=os.getenv("CLASHICD", "clashicd"),
-                          help="clashicd binary to test")
+                          default=os.getenv("TITLED", "titled"),
+                          help="titled binary to test")
 
     def __init__(self):
         super().__init__()

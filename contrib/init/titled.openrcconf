@@ -1,0 +1,33 @@
+# /etc/conf.d/titled: config file for /etc/init.d/titled
+
+# Config file location
+#TITLED_CONFIGFILE="/etc/title/title.conf"
+
+# What directory to write pidfile to?  (created and owned by $TITLED_USER)
+#TITLED_PIDDIR="/var/run/titled"
+
+# What filename to give the pidfile
+#TITLED_PIDFILE="${TITLED_PIDDIR}/titled.pid"
+
+# Where to write titled data (be mindful that the blockchain is large)
+#TITLED_DATADIR="/var/lib/titled"
+
+# User and group to own titled process
+#TITLED_USER="bitcoin"
+#TITLED_GROUP="bitcoin"
+
+# Path to titled executable
+#TITLED_BIN="/usr/bin/titled"
+
+# Nice value to run titled under
+#TITLED_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+TITLED_OPTS="-disablewallet"
+
+# The timeout in seconds OpenRC will wait for titled to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+TITLED_SIGTERM_TIMEOUT=60

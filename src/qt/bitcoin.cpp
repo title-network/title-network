@@ -94,7 +94,7 @@ static void InitMessage(const std::string &message) {
  * Translate string to current locale using Qt.
  */
 static std::string Translate(const char *psz) {
-    return QCoreApplication::translate("bitcoin-core", psz).toStdString();
+    return QCoreApplication::translate("title-network", psz).toStdString();
 }
 
 static QString GetLangTerritory() {
@@ -180,13 +180,13 @@ void DebugMessageHandler(QtMsgType type, const QMessageLogContext &context,
 }
 #endif
 
-/** Class encapsulating Bitcoin Core startup and shutdown.
+/** Class encapsulating Title Network startup and shutdown.
  * Allows running startup and shutdown in a different thread from the UI thread.
  */
-class BitcoinCore : public QObject {
+class TitleNetwork : public QObject {
     Q_OBJECT
 public:
-    explicit BitcoinCore();
+    explicit TitleNetwork();
 
 public Q_SLOTS:
     void initialize(Config *config);
@@ -268,14 +268,14 @@ private:
 
 #include "bitcoin.moc"
 
-BitcoinCore::BitcoinCore() : QObject() {}
+TitleNetwork::TitleNetwork() : QObject() {}
 
-void BitcoinCore::handleRunawayException(const std::exception *e) {
+void TitleNetwork::handleRunawayException(const std::exception *e) {
     PrintExceptionContinue(e, "Runaway exception");
     Q_EMIT runawayException(QString::fromStdString(GetWarnings("gui")));
 }
 
-void BitcoinCore::initialize(Config *cfg) {
+void TitleNetwork::initialize(Config *cfg) {
     Config &config(*cfg);
     try {
         qDebug() << __func__ << ": Running AppInit2 in thread";
@@ -303,7 +303,7 @@ void BitcoinCore::initialize(Config *cfg) {
     }
 }
 
-void BitcoinCore::shutdown() {
+void TitleNetwork::shutdown() {
     try {
         qDebug() << __func__ << ": Running Shutdown in thread";
         Interrupt(threadGroup);
@@ -392,7 +392,7 @@ void BitcoinApplication::createSplashScreen(const NetworkStyle *networkStyle) {
 void BitcoinApplication::startThread() {
     if (coreThread) return;
     coreThread = new QThread(this);
-    BitcoinCore *executor = new BitcoinCore();
+    TitleNetwork *executor = new TitleNetwork();
     executor->moveToThread(coreThread);
 
     /*  communication to and from thread */
@@ -509,7 +509,7 @@ void BitcoinApplication::initializeResult(int retval) {
 
 #ifdef ENABLE_WALLET
         // Now that initialization/startup is done, process any command-line
-        // bitcoincore: URIs or payment requests:
+        // titlenetwork: URIs or payment requests:
         connect(paymentServer,
                 SIGNAL(receivedPaymentRequest(SendCoinsRecipient)), window,
                 SLOT(handlePaymentRequest(SendCoinsRecipient)));
@@ -534,7 +534,7 @@ void BitcoinApplication::shutdownResult(int retval) {
 void BitcoinApplication::handleRunawayException(const QString &message) {
     QMessageBox::critical(
         0, "Runaway exception",
-        BitcoinGUI::tr("A fatal error occurred. Bitcoin Core can no longer "
+        BitcoinGUI::tr("A fatal error occurred. Title Network can no longer "
                        "continue safely and will quit.") +
             QString("\n\n") + message);
     ::exit(EXIT_FAILURE);
@@ -551,14 +551,14 @@ WId BitcoinApplication::getMainWinId() const {
 static void MigrateSettings() {
     assert(!QApplication::applicationName().isEmpty());
 
-    static const QString legacyAppName("BitcoinCore-Qt"),
+    static const QString legacyAppName("TitleNetwork-Qt"),
 #ifdef Q_OS_DARWIN
         // Macs and/or iOS et al use a domain-style name for Settings
         // files. All other platforms use a simple orgname. This
         // difference is documented in the QSettings class documentation.
-        legacyOrg("thebitcoincore.org");
+        legacyOrg("titlenetwork.org");
 #else
-        legacyOrg("thebitcoincore");
+        legacyOrg("titlenetwork");
 #endif
     QSettings
         // below picks up settings file location based on orgname,appname
@@ -575,8 +575,8 @@ static void MigrateSettings() {
 #endif
     const QStringList legacyKeys(legacy.allKeys());
 
-    // We only migrate settings if we have Core settings but no Bitcoin Core
-    // Sq settings
+    // We only migrate settings if we have Core settings but no Title Network
+    // settings
     if (!legacyKeys.isEmpty() && abcd.allKeys().isEmpty()) {
         for (const QString &key : legacyKeys) {
             // now, copy settings over
@@ -647,8 +647,8 @@ int main(int argc, char *argv[]) {
     QApplication::setOrganizationName(QAPP_ORG_NAME);
     QApplication::setOrganizationDomain(QAPP_ORG_DOMAIN);
     QApplication::setApplicationName(QAPP_APP_NAME_DEFAULT);
-    // Migrate settings from core's/our old GUI settings to Bitcoin Core Sq
-    // only if core's exist but Bitcoin Core Sq's doesn't.
+    // Migrate settings from core's/our old GUI settings to Title Network
+    // only if core's exist but Title Network's doesn't.
     // NOTE -- this function needs to be called *after* the above 3 lines
     // that set the app orgname and app name! If you move the above 3 lines
     // to elsewhere, take this call with you!
@@ -675,7 +675,7 @@ int main(int argc, char *argv[]) {
     /// directory. User language is set up: pick a data directory.
     if (!Intro::pickDataDirectory()) return EXIT_SUCCESS;
 
-    /// 6. Determine availability of data directory and parse clashic.conf
+    /// 6. Determine availability of data directory and parse title.conf
     /// - Do not call GetDataDir(true) before this step finishes.
     if (!boost::filesystem::is_directory(GetDataDir(false))) {
         QMessageBox::critical(
@@ -686,7 +686,7 @@ int main(int argc, char *argv[]) {
         return EXIT_FAILURE;
     }
     try {
-        ReadConfigFile(GetArg("-conf", CLASHIC_CONF_FILENAME));
+        ReadConfigFile(GetArg("-conf", TITLE_CONF_FILENAME));
     } catch (const std::exception &e) {
         QMessageBox::critical(
             0, QObject::tr(PACKAGE_NAME),
@@ -740,7 +740,7 @@ int main(int argc, char *argv[]) {
     if (PaymentServer::ipcSendCommandLine()) exit(EXIT_SUCCESS);
 
     // Start up the payment server early, too, so impatient users that click on
-    // bitcoinclashic: links repeatedly have their payment requests routed to
+    // titlenetwork: links repeatedly have their payment requests routed to
     // this process:
     app.createPaymentServer();
 #endif

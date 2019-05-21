@@ -137,7 +137,7 @@ bool ShutdownRequested() {
 /**
  * This is a minimally invasive approach to shutdown on LevelDB read errors from
  * the chainstate, while keeping user interface out of the common library, which
- * is shared between clashicd, and clashic-qt and non-server tools.
+ * is shared between titled, and title-qt and non-server tools.
  */
 class CCoinsViewErrorCatcher : public CCoinsViewBacked {
 public:
@@ -338,8 +338,8 @@ std::string HelpMessage(HelpMessageMode mode) {
                       .defaultAssumeValid.GetHex()));
     strUsage += HelpMessageOpt(
         "-conf=<file>", strprintf(_("Specify configuration file (default: %s)"),
-                                  CLASHIC_CONF_FILENAME));
-    if (mode == HMM_CLASHICD) {
+                                  TITLE_CONF_FILENAME));
+    if (mode == HMM_TITLED) {
 #if HAVE_DECL_DAEMON
         strUsage += HelpMessageOpt(
             "-daemon",
@@ -387,7 +387,7 @@ std::string HelpMessage(HelpMessageMode mode) {
 #ifndef WIN32
     strUsage += HelpMessageOpt(
         "-pid=<file>",
-        strprintf(_("Specify pid file (default: %s)"), CLASHIC_PID_FILENAME));
+        strprintf(_("Specify pid file (default: %s)"), TITLE_PID_FILENAME));
 #endif
     strUsage += HelpMessageOpt(
         "-prune=<n>",
@@ -858,8 +858,8 @@ std::string HelpMessage(HelpMessageMode mode) {
 
 std::string LicenseInfo() {
     const std::string URL_SOURCE_CODE =
-        "<https://github.com/bitcoin-cored/bitcoin-cored>";
-    const std::string URL_WEBSITE = "<https://thebitcoincore.org>";
+        "<https://github.com/title-network/title-network>";
+    const std::string URL_WEBSITE = "<https://title.network>";
 
     return CopyrightHolders(
                strprintf(_("Copyright (C) %i-%i"), 2009, COPYRIGHT_YEAR) +
@@ -1038,7 +1038,7 @@ void ThreadImport(const Config &config,
 }
 
 /** Sanity checks
- *  Ensure that Bitcoin ABCD is running in a usable environment with all
+ *  Ensure that Title Network is running in a usable environment with all
  *  necessary library support.
  */
 bool InitSanityCheck(void) {
@@ -1520,13 +1520,15 @@ bool AppInitParameterInteraction(Config &config) {
     if (GetBoolArg("-peerbloomfilters", DEFAULT_PEERBLOOMFILTERS))
         nLocalServices = ServiceFlags(nLocalServices | NODE_BLOOM);
 
-    // Signal Bitcoin Cash support.
-    // TODO: remove some time after the hardfork when no longer needed
-    // to differentiate the network nodes.
     nLocalServices = ServiceFlags(nLocalServices | NODE_BITCOIN_CORE);
 
-    // Preferentially keep peers which service NODE_BITCOIN_CASH
-    nRelevantServices = ServiceFlags(nRelevantServices | NODE_BITCOIN_CORE);
+    // Signal Title Network support.
+    // TODO: remove some time after the hardfork when no longer needed
+    // to differentiate the network nodes.
+    nLocalServices = ServiceFlags(nLocalServices | NODE_TITLE);
+
+    // Preferentially keep peers which service NODE_TITLE
+    nRelevantServices = ServiceFlags(nRelevantServices | NODE_TITLE);
 
     nMaxTipAge = GetArg("-maxtipage", DEFAULT_MAX_TIP_AGE);
 
@@ -1654,7 +1656,7 @@ bool AppInitMain(Config &config, boost::thread_group &threadGroup,
     LogPrintf("Default data directory %s\n", GetDefaultDataDir().string());
     LogPrintf("Using data directory %s\n", GetDataDir().string());
     LogPrintf("Using config file %s\n",
-              GetConfigFile(GetArg("-conf", CLASHIC_CONF_FILENAME)).string());
+              GetConfigFile(GetArg("-conf", TITLE_CONF_FILENAME)).string());
     LogPrintf("Using at most %i automatic connections (%i file descriptors "
               "available)\n",
               nMaxConnections, nFD);

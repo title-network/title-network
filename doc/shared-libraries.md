@@ -1,13 +1,13 @@
 Shared Libraries
 ================
 
-## clashicconsensus
+## titleconsensus
 
-The purpose of this library is to make the verification functionality that is critical to Bitcoin Clashic's consensus available to other applications, e.g. to language bindings.
+The purpose of this library is to make the verification functionality that is critical to Title Network's consensus available to other applications, e.g. to language bindings.
 
 ### API
 
-The interface is defined in the C header `clashicconsensus.h` located in  `src/script/clashicconsensus.h`.
+The interface is defined in the C header `titleconsensus.h` located in  `src/script/titleconsensus.h`.
 
 #### Version
 
@@ -44,6 +44,6 @@ The interface is defined in the C header `clashicconsensus.h` located in  `src/s
 
 ### Example Implementations
 - [NBitcoin](https://github.com/NicolasDorier/NBitcoin/blob/master/NBitcoin/Script.cs#L814) (.NET Bindings)
-- [node-libbitcoinconsensus](https://github.com/bitpay/node-libbitcoinconsensus) (Node.js Bindings)
-- [java-libbitcoinconsensus](https://github.com/dexX7/java-libbitcoinconsensus) (Java Bindings)
+- [node-libtitleconsensus](https://github.com/bitpay/node-libtitleconsensus) (Node.js Bindings)
+- [java-libtitleconsensus](https://github.com/dexX7/java-libtitleconsensus) (Java Bindings)
 - [bitcoinconsensus-php](https://github.com/Bit-Wasp/bitcoinconsensus-php) (PHP Bindings)

@@ -10,10 +10,10 @@
 
 /**
  * Name of client reported in the 'version' message. Report the same name
- * for both clashicd and bitcoin-abcd, to make it harder for attackers to
+ * for both titled and bitcoin-abcd, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("Bitcoin Core SQ");
+const std::string CLIENT_NAME("Title Network");
 
 /**
  * Client version number

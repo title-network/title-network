@@ -1,6 +1,6 @@
 all:
-	$(MAKE) -C ../../ test_clashic_qt
+	$(MAKE) -C ../../ test_title_qt
 clean:
-	$(MAKE) -C ../../ test_clashic_qt_clean
+	$(MAKE) -C ../../ test_title_qt_clean
 check:
-	$(MAKE) -C ../../ test_clashic_qt_check
+	$(MAKE) -C ../../ test_title_qt_check

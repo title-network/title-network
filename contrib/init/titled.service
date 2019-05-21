@@ -1,0 +1,22 @@
+[Unit]
+Description=Title Network's distributed currency daemon
+After=network.target
+
+[Service]
+User=bitcoin
+Group=bitcoin
+
+Type=forking
+PIDFile=/var/lib/titled/titled.pid
+ExecStart=/usr/bin/titled -daemon -pid=/var/lib/titled/titled.pid \
+-conf=/etc/title/title.conf -datadir=/var/lib/titled -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

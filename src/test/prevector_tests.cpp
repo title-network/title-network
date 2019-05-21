@@ -8,7 +8,7 @@
 #include "serialize.h"
 #include "streams.h"
 
-#include "test/test_clashic.h"
+#include "test/test_title.h"
 #include "test/test_random.h"
 
 #include <boost/range/adaptor/reversed.hpp>

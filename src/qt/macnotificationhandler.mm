@@ -13,7 +13,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"org.clashic.Clashic-Qt";
+        return @"org.title.Title-Qt";
     } else {
         return [self __bundleIdentifier];
     }

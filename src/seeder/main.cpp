@@ -159,6 +159,13 @@ public:
                                     NODE_XTHIN);
             filter_whitelist.insert(NODE_NETWORK | NODE_BITCOIN_CORE |
                                     NODE_BLOOM | NODE_XTHIN);
+            filter_whitelist.insert(NODE_NETWORK | NODE_TITLE);
+            filter_whitelist.insert(NODE_NETWORK | NODE_TITLE |
+                                    NODE_BLOOM);
+            filter_whitelist.insert(NODE_NETWORK | NODE_TITLE |
+                                    NODE_XTHIN);
+            filter_whitelist.insert(NODE_NETWORK | NODE_TITLE |
+                                    NODE_BLOOM | NODE_XTHIN);
         }
         if (host != nullptr && ns == nullptr) showHelp = true;
         if (showHelp) fprintf(stderr, help, argv[0]);

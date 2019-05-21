@@ -6,7 +6,7 @@
 #include "chain.h"
 #include "chainparams.h"
 #include "consensus/params.h"
-#include "test/test_clashic.h"
+#include "test/test_title.h"
 #include "test/test_random.h"
 #include "validation.h"
 

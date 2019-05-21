@@ -1,4 +1,4 @@
-Fuzz-testing Bitcoin Clashic ABCD
+Fuzz-testing Title Network
 ==========================
 
 A special test harness `test_clashic_fuzzy` is provided to provide an easy
@@ -20,13 +20,13 @@ export AFLPATH=$PWD
 Instrumentation
 ----------------
 
-To build Bitcoin Clashic ABCD using AFL instrumentation (this assumes that the
+To build Title Network using AFL instrumentation (this assumes that the
 `AFLPATH` was set as above):
 ```
 ./configure --disable-ccache --disable-shared --enable-tests CC=${AFLPATH}/afl-gcc CXX=${AFLPATH}/afl-g++
 export AFL_HARDEN=1
 cd src/
-make test/test_clashic_fuzzy
+make test/test_title_fuzzy
 ```
 We disable ccache because we don't want to pollute the ccache with instrumented
 objects, and similarly don't want to use non-instrumented cached objects linked
@@ -58,7 +58,7 @@ Fuzzing
 
 To start the actual fuzzing use:
 ```
-$AFLPATH/afl-fuzz -i ${AFLIN} -o ${AFLOUT} -m52 -- test/test_clashic_fuzzy
+$AFLPATH/afl-fuzz -i ${AFLIN} -o ${AFLOUT} -m52 -- test/test_title_fuzzy
 ```
 
 You may have to change a few kernel parameters to test optimally - `afl-fuzz`

@@ -1494,8 +1494,8 @@ static bool ProcessMessage(const Config &config, CNode *pfrom,
         int nMinPeerProtocolVersion = MIN_PEER_PROTO_VERSION;
 
         if ((nTimeReceived / 1000000) >=
-            chainparams.GetConsensus().enforceProtocolVersion80030Time) {
-            nMinPeerProtocolVersion = ONE_MINUTE_BLOCKS_VERSION;
+            chainparams.GetConsensus().enforceProtocolVersion80050Time) {
+            nMinPeerProtocolVersion = POW_CHANGE_BLAKE2B_VERSION;
         }
 
         if (nVersion < nMinPeerProtocolVersion) {

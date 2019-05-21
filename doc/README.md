@@ -1,36 +1,36 @@
-Bitcoin Core SQ
+Title Network
 =====================
 
 Setup
 ---------------------
-Bitcoin Core SQ is a fork of Bitcoin Core, which is the original Bitcoin client and builds the backbone of the network. It downloads and stores the entire history of Bitcoin transactions (which is currently several GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
+Title Network is a fork of Bitcoin Core, which is the original Bitcoin client and builds the backbone of the network. It downloads and stores the entire history of Bitcoin transactions (which is currently several GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
-To download Bitcoin Core SQ, visit [thebitcoincore.org](https://thebitcoincore.org/).
+To download Title Network, visit [title.network](https://title.network/).
 
 Running
 ---------------------
-The following are some helpful notes on how to run Core SQ on your native platform.
+The following are some helpful notes on how to run Title Network on your native platform.
 
 ### Unix
 
 Unpack the files into a directory and run:
 
-- `bin/clashic-qt` (GUI) or
-- `bin/clashicd` (headless)
+- `bin/title-qt` (GUI) or
+- `bin/titled` (headless)
 
 ### Windows
 
-Unpack the files into a directory, and then run clashic-qt.exe.
+Unpack the files into a directory, and then run title-qt.exe.
 
 ### OS X
 
-Drag bitcoin-abcd to your applications folder, and then run bitcoin-abcd.
+Drag title-network to your applications folder, and then run title-network.
 
 ### Need Help?
 
 * See the documentation at the [Bitcoin Wiki](https://en.bitcoin.it/wiki/Main_Page)
 for help and more information.
-* Ask for help on the [Bitcoin Core Discord](https://discordapp.com/invite/qUaQBN2).
+* Ask for help on the [Title Network Discord](https://discordapp.com/invite/qUaQBN2).
 
 Building
 ---------------------

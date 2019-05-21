@@ -53,7 +53,7 @@ class ABCD_CmdLine_Test (BitcoinTestFramework):
                                    self.extra_args[0])
         self.check_excessive(2 * LEGACY_MAX_BLOCK_SIZE)
         # Check for EB correctness in the subver string
-        self.check_subversion("/Bitcoin Core SQ:.*\(EB2\.0; .*\)/")
+        self.check_subversion("/Title Network:.*\(EB2\.0; .*\)/")
 
         self.log.info("  Attempt to set below legacy limit of 1MB - try %d bytes" %
                       LEGACY_MAX_BLOCK_SIZE)
@@ -69,7 +69,7 @@ class ABCD_CmdLine_Test (BitcoinTestFramework):
             assert(outputchecker.contains(
                 'Error: Excessive block size must be > 1,000,000 bytes (1MB)'))
             assert_equal(
-                'clashicd exited with status 1 during initialization', str(e))
+                'titled exited with status 1 during initialization', str(e))
         else:
             raise AssertionError("Must not accept excessiveblocksize"
                                  " value < %d bytes" % LEGACY_MAX_BLOCK_SIZE)
@@ -86,7 +86,7 @@ class ABCD_CmdLine_Test (BitcoinTestFramework):
             assert(outputchecker.contains(
                 'Error: ' + MAX_GENERATED_BLOCK_SIZE_ERROR))
             assert_equal(
-                'clashicd exited with status 1 during initialization', str(e))
+                'titled exited with status 1 during initialization', str(e))
         else:
             raise AssertionError('Must not accept excessiveblocksize'
                                  ' below blockmaxsize')

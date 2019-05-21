@@ -86,7 +86,7 @@ extern double NSAppKitVersionNumber;
 #endif
 
 namespace GUIUtil {
-const QString URI_SCHEME("bitcoinclashic");
+const QString URI_SCHEME("tnet");
 
 QString dateTimeStr(const QDateTime &date) {
     return date.date().toString(Qt::SystemLocaleShortDate) + QString(" ") +
@@ -158,7 +158,7 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent) {
 }
 
 bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out) {
-    // return if URI is not valid or is no bitcoinclashic: URI
+    // return if URI is not valid or is no tnet: URI
     if (!uri.isValid() || uri.scheme() != URI_SCHEME) return false;
 
     SendCoinsRecipient rv;
@@ -192,7 +192,7 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out) {
             fShouldReturnFalse = false;
         } else if (i->first == "amount") {
             if (!i->second.isEmpty()) {
-                if (!BitcoinUnits::parse(BitcoinUnits::BTCC, i->second,
+                if (!BitcoinUnits::parse(BitcoinUnits::TNET, i->second,
                                          &rv.amount)) {
                     return false;
                 }
@@ -211,9 +211,9 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out) {
 }
 
 bool parseBitcoinURI(QString uri, SendCoinsRecipient *out) {
-    // Convert bitcoinclashic:// to bitcoinclashic:
+    // Convert tnet:// to tnet:
     //
-    //    Cannot handle this later, because bitcoinclashic://
+    //    Cannot handle this later, because tnet://
     //    will cause Qt to see the part after // as host,
     //    which will lower-case it (and thus invalidate the address).
     if (uri.startsWith(URI_SCHEME + "://", Qt::CaseInsensitive)) {
@@ -230,7 +230,7 @@ QString formatBitcoinURI(const SendCoinsRecipient &info) {
     if (info.amount) {
         ret +=
             QString("?amount=%1")
-                .arg(BitcoinUnits::format(BitcoinUnits::BTCC, info.amount, false,
+                .arg(BitcoinUnits::format(BitcoinUnits::TNET, info.amount, false,
                                           BitcoinUnits::separatorNever));
         paramCount++;
     }
@@ -924,6 +924,9 @@ QString formatServicesStr(quint64 mask) {
                     break;
                 case NODE_BITCOIN_CORE:
                     strList.append("CORE");
+                    break;
+                case NODE_TITLE:
+                    strList.append("TITLE");
                     break;
                 default:
                     strList.append(QString("%1[%2]").arg("UNKNOWN").arg(check));

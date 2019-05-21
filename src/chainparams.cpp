@@ -148,9 +148,9 @@ public:
         // Actual fork was 5 hours later
         consensus.coreHardForkActivationTime = 1526852960;
 
-        // Reject PROTOCOL_VERSION 70015 Time
-        // Aug 11, 2018 14:00:00 GMT Enforce PROTOCOL_VERSION=80030
-        consensus.enforceProtocolVersion80030Time = 1533996000;
+        // Reject PROTOCOL_VERSION 80030 Time
+        // Jun 06, 2019 14:00:00 GMT Enforce PROTOCOL_VERSION=80050
+        consensus.enforceProtocolVersion80050Time = 1559815200;
 
         // At this height we will hardfork to 1-minute blocks and 30-period DAA
         consensus.oneMinuteBlockHeight = 588672;
@@ -166,7 +166,7 @@ public:
         // ie. (((586656 -(210000*2))+(((210000*3)-586656)*10)))=166656+(43344*10)
         // so this interval would be 581952 blocks past last halving
         // which means 12.5 / 10 / 2 block rewards at a height of 210000 * 2 + 581952
-        // or halve to 0.625 BTCC at height 1,001,952
+        // or halve to 0.625 TNET at height 1,001,952
         consensus.nSubsidyHalvingIntervalOneMinuteAdjustment =
             (((consensus.oneMinuteBlockHeight - (210000 * 2)) + 
             (((210000 * 3) - consensus.oneMinuteBlockHeight) * 10)));
@@ -214,7 +214,7 @@ public:
         base58Prefixes[SECRET_KEY] = std::vector<uint8_t>(1, 128);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x88, 0xAD, 0xE4};
-        coreaddrPrefix = "bitcoincore";
+        titleaddrPrefix = "tnet";
 
         vFixedSeeds = std::vector<SeedSpec6>(
             pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
@@ -272,7 +272,10 @@ public:
                                   "9d6fd1b1ed521f899d44ee")},
                 // Jan 17, 2019
                 {734750, uint256S("0x000000000000000eea84db6a33adefff7cdb4ee87e"
-                                  "c961a8640b0de8b0df363d")}}};
+                                  "c961a8640b0de8b0df363d")},
+                // May 12, 2019
+                {819300, uint256S("0x00000000000000921ef5597db254728192397d6a40"
+                                  "eaf5b502da4a4538bedb5a")}}};
 
 
         // Data as of block
@@ -354,8 +357,8 @@ public:
         // May, 21st hard fork
         consensus.coreHardForkActivationTime = 1526860800;
 
-        // Reject PROTOCOL_VERSION 70015 Time
-        consensus.enforceProtocolVersion80030Time = 1532581620;
+        // Reject PROTOCOL_VERSION 80030 Time
+        consensus.enforceProtocolVersion80050Time = 1532581620;
  
         // At this height we will hardfork to 1-minute blocks and 30-period DAA
         consensus.oneMinuteBlockHeight = 160;
@@ -402,7 +405,7 @@ public:
         base58Prefixes[SECRET_KEY] = std::vector<uint8_t>(1, 239);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
-        coreaddrPrefix = "btcctest";
+        titleaddrPrefix = "tnettest";
         vFixedSeeds = std::vector<SeedSpec6>(
             pnSeed6_test, pnSeed6_test + ARRAYLEN(pnSeed6_test));
 
@@ -530,7 +533,7 @@ public:
         base58Prefixes[SECRET_KEY] = std::vector<uint8_t>(1, 239);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
-        coreaddrPrefix = "btccreg";
+        titleaddrPrefix = "tnetreg";
     }
 
     void UpdateBIP9Parameters(Consensus::DeploymentPos d, int64_t nStartTime,

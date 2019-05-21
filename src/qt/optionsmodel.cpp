@@ -74,7 +74,7 @@ void OptionsModel::Init(bool resetSettings) {
 
     // Display
     if (!settings.contains("nDisplayUnit")) {
-        settings.setValue("nDisplayUnit", BitcoinUnits::BTCC);
+        settings.setValue("nDisplayUnit", BitcoinUnits::TNET);
     }
     nDisplayUnit = settings.value("nDisplayUnit").toInt();
 

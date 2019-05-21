@@ -24,10 +24,10 @@ In case you want to build the disk image with `make deploy` (.dmg / optional), y
 
 NOTE: Building with Qt4 is still supported, however, could result in a broken UI. Building with Qt5 is recommended.
 
-Build Bitcoin Core SQ
+Build Title Network
 --------------------------
 
-1. Clone the Bitcoin Core SQ source code and cd into `bitcoin-cored`
+1. Clone the Title Network source code and cd into `bitcoin-cored`
 
         git clone github.com/bitcoin-cored/bitcoin-cored
         cd bitcoin-cored
@@ -53,37 +53,37 @@ Build Bitcoin Core SQ
 Running
 -------
 
-Bitcoin Core SQ is now available at `./src/clashicd`
+Title Network is now available at `./src/titled`
 
 Before running, it's recommended you create an RPC configuration file.
 
-    echo -e "rpcuser=bitcoinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Clashic/clashic.conf"
+    echo -e "rpcuser=bitcoinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Title/title.conf"
 
-    chmod 600 "/Users/${USER}/Library/Application Support/Clashic/clashic.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/Title/title.conf"
 
-The first time you run clashicd, it will start downloading the blockchain. This process could take several hours.
+The first time you run titled, it will start downloading the blockchain. This process could take several hours.
 
 You can monitor the download process by looking at the debug.log file:
 
-    tail -f $HOME/Library/Application\ Support/Bitcoin/debug.log
+    tail -f $HOME/Library/Application\ Support/Title/debug.log
 
 Other commands:
 -------
 
-    ./src/clashicd -daemon # Starts the clashic daemon.
-    ./src/clashic-cli --help # Outputs a list of command-line options.
-    ./src/clashic-cli help # Outputs a list of RPC commands when the daemon is running.
+    ./src/titled -daemon # Starts the title daemon.
+    ./src/title-cli --help # Outputs a list of command-line options.
+    ./src/title-cli help # Outputs a list of RPC commands when the daemon is running.
 
 Using Qt Creator as IDE
 ------------------------
-You can use Qt Creator as an IDE, for clashic development.
+You can use Qt Creator as an IDE, for title development.
 Download and install the community edition of [Qt Creator](https://www.qt.io/download/).
 Uncheck everything except Qt Creator during the installation process.
 
 1. Make sure you installed everything through Homebrew mentioned above
 2. Do a proper ./configure --enable-debug
 3. In Qt Creator do "New Project" -> Import Project -> Import Existing Project
-4. Enter "clashic-qt" as project name, enter src/qt as location
+4. Enter "title-qt" as project name, enter src/qt as location
 5. Leave the file selection as it is
 6. Confirm the "summary page"
 7. In the "Projects" tab select "Manage Kits..."

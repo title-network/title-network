@@ -102,8 +102,8 @@ namespace program_options {
 
 } // namespace boost
 
-const char *const CLASHIC_CONF_FILENAME = "clashic.conf";
-const char *const CLASHIC_PID_FILENAME = "clashicd.pid";
+const char *const TITLE_CONF_FILENAME = "title.conf";
+const char *const TITLE_PID_FILENAME = "titled.pid";
 
 ArgsManager gArgs;
 bool fPrintToConsole = false;
@@ -516,13 +516,13 @@ void PrintExceptionContinue(const std::exception *pex, const char *pszThread) {
 
 boost::filesystem::path GetDefaultDataDir() {
     namespace fs = boost::filesystem;
-// Windows < Vista: C:\Documents and Settings\Username\Application Data\Clashic
-// Windows >= Vista: C:\Users\Username\AppData\Roaming\Clashic
-// Mac: ~/Library/Application Support/Clashic
-// Unix: ~/.clashic
+// Windows < Vista: C:\Documents and Settings\Username\Application Data\TNET
+// Windows >= Vista: C:\Users\Username\AppData\Roaming\TNET
+// Mac: ~/Library/Application Support/TNET
+// Unix: ~/.tnet
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "Clashic";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "TNET";
 #else
     fs::path pathRet;
     char *pszHome = getenv("HOME");
@@ -532,10 +532,10 @@ boost::filesystem::path GetDefaultDataDir() {
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/Clashic";
+    return pathRet / "Library/Application Support/TNET";
 #else
     // Unix
-    return pathRet / ".clashic";
+    return pathRet / ".tnet";
 #endif
 #endif
 }
@@ -589,7 +589,7 @@ boost::filesystem::path GetConfigFile(const std::string &confPath) {
 void ArgsManager::ReadConfigFile(const std::string &confPath) {
     boost::filesystem::ifstream streamConfig(GetConfigFile(confPath));
 
-    // No clashic.conf file is OK
+    // No title.conf file is OK
     if (!streamConfig.good()) return;
 
     {
@@ -602,7 +602,7 @@ void ArgsManager::ReadConfigFile(const std::string &confPath) {
              end;
              it != end; ++it) {
             // Don't overwrite existing settings so command line settings
-            // override clashic.conf
+            // override title.conf
             std::string strKey = std::string("-") + it->string_key;
             std::string strValue = it->value[0];
             InterpretNegativeSetting(strKey, strValue);
@@ -618,7 +618,7 @@ void ArgsManager::ReadConfigFile(const std::string &confPath) {
 
 #ifndef WIN32
 boost::filesystem::path GetPidFile() {
-    boost::filesystem::path pathPidFile(GetArg("-pid", CLASHIC_PID_FILENAME));
+    boost::filesystem::path pathPidFile(GetArg("-pid", TITLE_PID_FILENAME));
     if (!pathPidFile.is_complete()) pathPidFile = GetDataDir() / pathPidFile;
     return pathPidFile;
 }
