@@ -163,9 +163,9 @@ gmake
 However, this does not appear to work. Compilation succeeds, but link fails
 with many 'local symbol discarded' errors:
 
-    local symbol 150: discarded in section `.text._ZN10tinyformat6detail14FormatIterator6finishEv' from libbitcoin_util.a(libbitcoin_util_a-random.o)
-    local symbol 151: discarded in section `.text._ZN10tinyformat6detail14FormatIterator21streamStateFromFormatERSoRjPKcii' from libbitcoin_util.a(libbitcoin_util_a-random.o)
-    local symbol 152: discarded in section `.text._ZN10tinyformat6detail12convertToIntIA13_cLb0EE6invokeERA13_Kc' from libbitcoin_util.a(libbitcoin_util_a-random.o)
+    local symbol 150: discarded in section `.text._ZN10tinyformat6detail14FormatIterator6finishEv' from libtitle_util.a(libtitle_util_a-random.o)
+    local symbol 151: discarded in section `.text._ZN10tinyformat6detail14FormatIterator21streamStateFromFormatERSoRjPKcii' from libtitle_util.a(libtitle_util_a-random.o)
+    local symbol 152: discarded in section `.text._ZN10tinyformat6detail12convertToIntIA13_cLb0EE6invokeERA13_Kc' from libtitle_util.a(libtitle_util_a-random.o)
 
 According to similar reported errors this is a binutils (ld) issue in 2.15, the
 version installed by OpenBSD 5.7:

@@ -27,17 +27,17 @@ BITCOIN_INCLUDES += $(UNIVALUE_CFLAGS)
 TITLE_SEEDER_INCLUDES = -I$(srcdir)/seeder
 TITLE_SEEDER_INCLUDES += $(BITCOIN_INCLUDES)
 
-LIBBITCOIN_SERVER=libbitcoin_server.a
-LIBBITCOIN_COMMON=libbitcoin_common.a
+LIBTITLE_SERVER=libtitle_server.a
+LIBTITLE_COMMON=libtitle_common.a
 LIBTITLE_CONSENSUS=libtitle_consensus.a
-LIBBITCOIN_CLI=libbitcoin_cli.a
-LIBBITCOIN_UTIL=libbitcoin_util.a
-LIBBITCOIN_CRYPTO=crypto/libbitcoin_crypto.a
-LIBBITCOINQT=qt/libbitcoinqt.a
+LIBTITLE_CLI=libtitle_cli.a
+LIBTITLE_UTIL=libtitle_util.a
+LIBTITLE_CRYPTO=crypto/libtitle_crypto.a
+LIBTITLEQT=qt/libtitleqt.a
 LIBSECP256K1=secp256k1/libsecp256k1.la
 
 if ENABLE_ZMQ
-LIBBITCOIN_ZMQ=libbitcoin_zmq.a
+LIBTITLE_ZMQ=libtitle_zmq.a
 endif
 if BUILD_TITLE_LIBS
 LIBTITLECONSENSUS=libtitleconsensus.la
@@ -46,7 +46,7 @@ if BUILD_TITLE_SEEDER
 LIBTITLE_SEEDER=libtitle_seeder.a
 endif
 if ENABLE_WALLET
-LIBBITCOIN_WALLET=libbitcoin_wallet.a
+LIBTITLE_WALLET=libtitle_wallet.a
 endif
 
 $(LIBSECP256K1): $(wildcard secp256k1/src/*) $(wildcard secp256k1/include/*)
@@ -55,15 +55,15 @@ $(LIBSECP256K1): $(wildcard secp256k1/src/*) $(wildcard secp256k1/include/*)
 # Make is not made aware of per-object dependencies to avoid limiting building parallelization
 # But to build the less dependent modules first, we manually select their order here:
 EXTRA_LIBRARIES += \
-  $(LIBBITCOIN_CRYPTO) \
-  $(LIBBITCOIN_UTIL) \
-  $(LIBBITCOIN_COMMON) \
+  $(LIBTITLE_CRYPTO) \
+  $(LIBTITLE_UTIL) \
+  $(LIBTITLE_COMMON) \
   $(LIBTITLE_CONSENSUS) \
-  $(LIBBITCOIN_SERVER) \
-  $(LIBBITCOIN_CLI) \
+  $(LIBTITLE_SERVER) \
+  $(LIBTITLE_CLI) \
   $(LIBTITLE_SEEDER) \
-  $(LIBBITCOIN_WALLET) \
-  $(LIBBITCOIN_ZMQ)
+  $(LIBTITLE_WALLET) \
+  $(LIBTITLE_ZMQ)
 
 lib_LTLIBRARIES = $(LIBTITLECONSENSUS)
 
@@ -187,12 +187,12 @@ obj/build.h: FORCE
 	@$(MKDIR_P) $(builddir)/obj
 	@$(top_srcdir)/share/genbuild.sh $(abs_top_builddir)/src/obj/build.h \
 	  $(abs_top_srcdir)
-libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
+libtitle_util_a-clientversion.$(OBJEXT): obj/build.h
 
 # server: shared between titled and title-qt
-libbitcoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
-libbitcoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoin_server_a_SOURCES = \
+libtitle_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
+libtitle_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libtitle_server_a_SOURCES = \
   addrman.cpp \
   addrdb.cpp \
   bloom.cpp \
@@ -235,9 +235,9 @@ libbitcoin_server_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 if ENABLE_ZMQ
-libbitcoin_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
-libbitcoin_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoin_zmq_a_SOURCES = \
+libtitle_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
+libtitle_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libtitle_zmq_a_SOURCES = \
   zmq/zmqabstractnotifier.cpp \
   zmq/zmqnotificationinterface.cpp \
   zmq/zmqpublishnotifier.cpp
@@ -246,9 +246,9 @@ endif
 
 # wallet: shared between titled and title-qt, but only linked
 # when wallet enabled
-libbitcoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libbitcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoin_wallet_a_SOURCES = \
+libtitle_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libtitle_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libtitle_wallet_a_SOURCES = \
   wallet/crypter.cpp \
   wallet/db.cpp \
   wallet/finaltx.cpp \
@@ -259,9 +259,9 @@ libbitcoin_wallet_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 # crypto primitives library
-crypto_libbitcoin_crypto_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_CONFIG_INCLUDES)
-crypto_libbitcoin_crypto_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-crypto_libbitcoin_crypto_a_SOURCES = \
+crypto_libtitle_crypto_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_CONFIG_INCLUDES)
+crypto_libtitle_crypto_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+crypto_libtitle_crypto_a_SOURCES = \
   crypto/aes.cpp \
   crypto/aes.h \
   crypto/chacha20.h \
@@ -319,9 +319,9 @@ libtitle_consensus_a_SOURCES = \
   version.h
 
 # common: shared between titled, and title-qt and non-server tools
-libbitcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libbitcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoin_common_a_SOURCES = \
+libtitle_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libtitle_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libtitle_common_a_SOURCES = \
   amount.cpp \
   base58.cpp \
   cashaddr.cpp \
@@ -344,9 +344,9 @@ libbitcoin_common_a_SOURCES = \
 # util: shared between all executables.
 # This library *must* be included to make sure that the glibc
 # backward-compatibility objects and their sanity checks are linked.
-libbitcoin_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libbitcoin_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoin_util_a_SOURCES = \
+libtitle_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libtitle_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libtitle_util_a_SOURCES = \
   support/lockedpool.cpp \
   chainparamsbase.cpp \
   clientversion.cpp \
@@ -365,13 +365,13 @@ libbitcoin_util_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 if GLIBC_BACK_COMPAT
-libbitcoin_util_a_SOURCES += compat/glibc_compat.cpp
+libtitle_util_a_SOURCES += compat/glibc_compat.cpp
 endif
 
 # cli: shared between title-cli and title-qt
-libbitcoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libbitcoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libbitcoin_cli_a_SOURCES = \
+libtitle_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libtitle_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libtitle_cli_a_SOURCES = \
   rpc/client.cpp \
   $(BITCOIN_CORE_H)
 
@@ -394,7 +394,7 @@ libtitle_seeder_a_SOURCES = \
   seeder/util.cpp \
   seeder/util.h
 
-nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
+nodist_libtitle_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
 # titled binary #
@@ -408,14 +408,14 @@ titled_SOURCES += titled-res.rc
 endif
 
 titled_LDADD = \
-  $(LIBBITCOIN_SERVER) \
-  $(LIBBITCOIN_COMMON) \
+  $(LIBTITLE_SERVER) \
+  $(LIBTITLE_COMMON) \
   $(LIBUNIVALUE) \
-  $(LIBBITCOIN_UTIL) \
-  $(LIBBITCOIN_WALLET) \
-  $(LIBBITCOIN_ZMQ) \
+  $(LIBTITLE_UTIL) \
+  $(LIBTITLE_WALLET) \
+  $(LIBTITLE_ZMQ) \
   $(LIBTITLE_CONSENSUS) \
-  $(LIBBITCOIN_CRYPTO) \
+  $(LIBTITLE_CRYPTO) \
   $(LIBLEVELDB) \
   $(LIBLEVELDB_SSE42) \
   $(LIBMEMENV) \
@@ -434,10 +434,10 @@ title_cli_SOURCES += title-cli-res.rc
 endif
 
 title_cli_LDADD = \
-  $(LIBBITCOIN_CLI) \
+  $(LIBTITLE_CLI) \
   $(LIBUNIVALUE) \
-  $(LIBBITCOIN_UTIL) \
-  $(LIBBITCOIN_CRYPTO)
+  $(LIBTITLE_UTIL) \
+  $(LIBTITLE_CRYPTO)
 
 title_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
@@ -450,8 +450,8 @@ title_seeder_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 title_seeder_LDADD = \
   $(LIBTITLE_SEEDER) \
-  $(LIBBITCOIN_UTIL) \
-  $(LIBBITCOIN_CRYPTO)
+  $(LIBTITLE_UTIL) \
+  $(LIBTITLE_CRYPTO)
 
 title_seeder_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 #
@@ -468,10 +468,10 @@ endif
 
 title_tx_LDADD = \
   $(LIBUNIVALUE) \
-  $(LIBBITCOIN_COMMON) \
-  $(LIBBITCOIN_UTIL) \
+  $(LIBTITLE_COMMON) \
+  $(LIBTITLE_UTIL) \
   $(LIBTITLE_CONSENSUS) \
-  $(LIBBITCOIN_CRYPTO) \
+  $(LIBTITLE_CRYPTO) \
   $(LIBSECP256K1)
 
 title_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
@@ -480,7 +480,7 @@ title_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 # titleconsensus library #
 if BUILD_TITLE_LIBS
 include_HEADERS = script/titleconsensus.h
-libtitleconsensus_la_SOURCES = $(crypto_libbitcoin_crypto_a_SOURCES) $(libtitle_consensus_a_SOURCES)
+libtitleconsensus_la_SOURCES = $(crypto_libtitle_crypto_a_SOURCES) $(libtitle_consensus_a_SOURCES)
 
 if GLIBC_BACK_COMPAT
   libtitleconsensus_la_SOURCES += compat/glibc_compat.cpp

@@ -3,7 +3,7 @@
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 bin_PROGRAMS += qt/title-qt
-EXTRA_LIBRARIES += qt/libbitcoinqt.a
+EXTRA_LIBRARIES += qt/libtitleqt.a
 
 # bitcoin qt core #
 QT_TS = \
@@ -362,14 +362,14 @@ TITLE_RC = qt/res/title-qt-res.rc
 TITLE_QT_INCLUDES = -I$(builddir)/qt -I$(srcdir)/qt -I$(srcdir)/qt/forms \
   -I$(builddir)/qt/forms -DQT_NO_KEYWORDS
 
-qt_libbitcoinqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(TITLE_QT_INCLUDES) \
+qt_libtitleqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(TITLE_QT_INCLUDES) \
   $(QT_INCLUDES) $(QT_DBUS_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS)
-qt_libbitcoinqt_a_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
+qt_libtitleqt_a_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
 
-qt_libbitcoinqt_a_SOURCES = $(TITLE_QT_CPP) $(TITLE_QT_H) $(QT_FORMS_UI) \
+qt_libtitleqt_a_SOURCES = $(TITLE_QT_CPP) $(TITLE_QT_H) $(QT_FORMS_UI) \
   $(QT_QRC) $(QT_QRC_LOCALE) $(QT_TS) $(PROTOBUF_PROTO) $(RES_ICONS) $(RES_IMAGES) $(RES_MOVIES)
 
-nodist_qt_libbitcoinqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(PROTOBUF_CC) \
+nodist_qt_libtitleqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(PROTOBUF_CC) \
   $(PROTOBUF_H) $(QT_QRC_CPP) $(QT_QRC_LOCALE_CPP)
 
 # forms/foo.h -> forms/ui_foo.h
@@ -378,7 +378,7 @@ QT_FORMS_H=$(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:
 # Most files will depend on the forms and moc files as includes. Generate them
 # before anything else.
 $(QT_MOC): $(QT_FORMS_H)
-$(qt_libbitcoinqt_a_OBJECTS) $(qt_title_qt_OBJECTS) : | $(QT_MOC)
+$(qt_libtitleqt_a_OBJECTS) $(qt_title_qt_OBJECTS) : | $(QT_MOC)
 
 #Generating these with a half-written protobuf header leads to wacky results.
 #This makes sure it's done.
@@ -397,14 +397,14 @@ endif
 if TARGET_WINDOWS
   qt_title_qt_SOURCES += $(TITLE_RC)
 endif
-qt_title_qt_LDADD = qt/libbitcoinqt.a $(LIBBITCOIN_SERVER)
+qt_title_qt_LDADD = qt/libtitleqt.a $(LIBTITLE_SERVER)
 if ENABLE_WALLET
-qt_title_qt_LDADD += $(LIBBITCOIN_WALLET)
+qt_title_qt_LDADD += $(LIBTITLE_WALLET)
 endif
 if ENABLE_ZMQ
-qt_title_qt_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+qt_title_qt_LDADD += $(LIBTITLE_ZMQ) $(ZMQ_LIBS)
 endif
-qt_title_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBTITLE_CONSENSUS) $(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) $(LIBLEVELDB_SSE42) $(LIBMEMENV) \
+qt_title_qt_LDADD += $(LIBTITLE_CLI) $(LIBTITLE_COMMON) $(LIBTITLE_UTIL) $(LIBTITLE_CONSENSUS) $(LIBTITLE_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) $(LIBLEVELDB_SSE42) $(LIBMEMENV) \
   $(BOOST_LIBS) $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(LIBSECP256K1) \
   $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
 qt_title_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
@@ -415,7 +415,7 @@ QT_QM=$(QT_TS:.ts=.qm)
 
 SECONDARY: $(QT_QM)
 
-$(srcdir)/qt/bitcoinstrings.cpp: $(libbitcoin_server_a_SOURCES) $(libbitcoin_wallet_a_SOURCES) $(libbitcoin_common_a_SOURCES) $(libbitcoin_zmq_a_SOURCES) $(libtitle_consensus_a_SOURCES) $(libbitcoin_util_a_SOURCES)
+$(srcdir)/qt/bitcoinstrings.cpp: $(libtitle_server_a_SOURCES) $(libtitle_wallet_a_SOURCES) $(libtitle_common_a_SOURCES) $(libtitle_zmq_a_SOURCES) $(libtitle_consensus_a_SOURCES) $(libtitle_util_a_SOURCES)
 	@test -n $(XGETTEXT) || echo "xgettext is required for updating translations"
 	$(AM_V_GEN) cd $(srcdir); XGETTEXT=$(XGETTEXT) PACKAGE_NAME="$(PACKAGE_NAME)" COPYRIGHT_HOLDERS="$(COPYRIGHT_HOLDERS)" COPYRIGHT_HOLDERS_SUBSTITUTION="$(COPYRIGHT_HOLDERS_SUBSTITUTION)" $(PYTHON) ../share/qt/extract_strings_qt.py $^
 
@@ -435,12 +435,12 @@ $(QT_QRC_CPP): $(QT_QRC) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_MOVIES) 
 	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name bitcoin $< | \
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
-CLEAN_QT = $(nodist_qt_libbitcoinqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda qt/*.gcno
+CLEAN_QT = $(nodist_qt_libtitleqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda qt/*.gcno
 
 CLEANFILES += $(CLEAN_QT)
 
 title_qt_clean: FORCE
-	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_title_qt_OBJECTS) qt/title-qt$(EXEEXT) $(LIBBITCOINQT)
+	rm -f $(CLEAN_QT) $(qt_libtitleqt_a_OBJECTS) $(qt_title_qt_OBJECTS) qt/title-qt$(EXEEXT) $(LIBTITLEQT)
 
 title_qt : qt/title-qt$(EXEEXT)
 
