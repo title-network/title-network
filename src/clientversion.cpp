@@ -9,9 +9,7 @@
 #include <string>
 
 /**
- * Name of client reported in the 'version' message. Report the same name
- * for both titled and bitcoin-abcd, to make it harder for attackers to
- * target servers or GUI users specifically.
+ * Name of client reported in the 'version' message.
  */
 const std::string CLIENT_NAME("Title Network");
 
