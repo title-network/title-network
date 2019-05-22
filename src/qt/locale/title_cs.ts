@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
 <TS language="cs" version="2.1">
 <context>
     <name>AddressBookPage</name>
@@ -62,12 +64,12 @@
         <translation>Přijímací adresy</translation>
     </message>
     <message>
-        <source>These are your Bitcoin Core addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Tohle jsou tvé bitcoinové core adresy pro posílání plateb. Před odesláním mincí si vždy zkontroluj částku a cílovou adresu.</translation>
+        <source>These are your Title Network addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Tohle jsou tvé Title Network adresy pro posílání plateb. Před odesláním mincí si vždy zkontroluj částku a cílovou adresu.</translation>
     </message>
     <message>
-        <source>These are your Bitcoin Core addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Tohle jsou tvé bitcoinové core adresy pro příjem plateb. Nezapomeň si pro každou transakci vždy vygenerovat novou adresu.</translation>
+        <source>These are your Title Network addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Tohle jsou tvé Title Network adresy pro příjem plateb. Nezapomeň si pro každou transakci vždy vygenerovat novou adresu.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -180,8 +182,8 @@
         <translation>Peněženka je zašifrována</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins core from being stolen by malware infecting your computer.</source>
-        <translation>%1 se teď ukončí, aby dokončil zašifrování. Pamatuj však, že pouhé zašifrování peněženky nemůže zabránit krádeži tvých bitcoinů core malwarem, kterým se může počítač nakazit.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your TNET from being stolen by malware infecting your computer.</source>
+        <translation>%1 se teď ukončí, aby dokončil zašifrování. Pamatuj však, že pouhé zašifrování peněženky nemůže zabránit krádeži tvých TNET malwarem, kterým se může počítač nakazit.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -338,7 +340,7 @@
         <translation>Vytvářím nový index bloků na disku...</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin Core address</source>
+        <source>Send coins to a Title Network address</source>
         <translation>Pošli mince na Bitcoinovou Core adresu</translation>
     </message>
     <message>
@@ -363,7 +365,7 @@
     </message>
     <message>
         <source>Bitcoin</source>
-        <translation>Bitcoin Core</translation>
+        <translation>Title Network</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -390,12 +392,12 @@
         <translation>Zašifruj soukromé klíče ve své peněžence</translation>
     </message>
     <message>
-        <source>Sign messages with your Bitcoin Core addresses to prove you own them</source>
-        <translation>Podepiš zprávy svými bitcoinovými core adresami, čímž prokážeš, že jsi jejich vlastníkem</translation>
+        <source>Sign messages with your Title Network addresses to prove you own them</source>
+        <translation>Podepiš zprávy svými Title Network adresami, čímž prokážeš, že jsi jejich vlastníkem</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Bitcoin Core addresses</source>
-        <translation>Ověř zprávy, aby ses ujistil, že byly podepsány danými bitcoinovými core adresami</translation>
+        <source>Verify messages to ensure they were signed with specified Title Network addresses</source>
+        <translation>Ověř zprávy, aby ses ujistil, že byly podepsány danými Title Network adresami</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -434,8 +436,8 @@
         <translation>Ar&amp;gumenty příkazové řádky</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Bitcoin Core network</source>
-        <translation><numerusform>%n aktivní spojení do bitcoinové core sítě</numerusform><numerusform>%n aktivní spojení do bitcoinové sítě</numerusform><numerusform>%n aktivních spojení do bitcoinové sítě</numerusform></translation>
+        <source>%n active connection(s) to Title Network</source>
+        <translation><numerusform>%n aktivní spojení do Title Network sítě</numerusform><numerusform>%n aktivní spojení do Title Network sítě</numerusform><numerusform>%n aktivních spojení do Title Network sítě</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -478,7 +480,7 @@
         <translation>Aktuální</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Bitcoin Core command-line options</source>
+        <source>Show the %1 help message to get a list with possible Title Network command-line options</source>
         <translation>Seznam argumentů Bitcoinu Core pro příkazovou řádku získáš v nápovědě %1</translation>
     </message>
     <message>
@@ -548,8 +550,8 @@
         <translation>Peněženka je &lt;b&gt;zašifrovaná&lt;/b&gt; a momentálně &lt;b&gt;zamčená&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Bitcoin Core can no longer continue safely and will quit.</source>
-        <translation>Stala se fatální chyba. Bitcoin Core nemůže bezpečně pokračovat v činnosti, a proto skončí.</translation>
+        <source>A fatal error occurred. Title Network can no longer continue safely and will quit.</source>
+        <translation>Stala se fatální chyba. Title Network nemůže bezpečně pokračovat v činnosti, a proto skončí.</translation>
     </message>
 </context>
 <context>
@@ -742,8 +744,8 @@
         <translation>Uprav odesílací adresu</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Bitcoin Core address.</source>
-        <translation>Zadaná adresa „%1“ není platná bitcoinová core adresa.</translation>
+        <source>The entered address "%1" is not a valid Title Network address.</source>
+        <translation>Zadaná adresa „%1“ není platná Title Network adresa.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -851,7 +853,7 @@
         <translation>Tohle je poprvé, co spouštíš %1, takže si můžeš zvolit, kam bude ukládat svá data.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Bitcoin Core block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <source>%1 will download and store a copy of the Title Network block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
         <translation>%1 bude stahovat kopii řetězce bloků. Proto bude potřeba do tohoto adresáře uložit nejméně %2 GB dat – toto číslo bude navíc v průběhu času růst. Tvá peněženka bude rovněž uložena v tomto adresáři.</translation>
     </message>
     <message>
@@ -886,12 +888,12 @@
         <translation>Formulář</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcoin network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the Title Network, as detailed below.</source>
         <translation>Nedávné transakce ještě nemusí být vidět, takže stav tvého účtu nemusí být platný. Jakmile se však tvá peněženka dosynchronizuje s bitcoinovou sítí (viz informace níže), tak už bude stav správně.</translation>
     </message>
     <message>
-        <source>Attempting to spend bitcoins core that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>Utrácení bitcoinů, které už utratily zatím nezobrazené transakce, nebude bitcoinovou core sítí umožněno.</translation>
+        <source>Attempting to spend TNET that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Utrácení TNET, které už utratily zatím nezobrazené transakce, nebude Title Network sítí umožněno.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1048,7 +1050,7 @@
         <translation>&amp;Utrácet i ještě nepotvrzené drobné</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin Core client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the Title Network client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>Automaticky otevře potřebný port na routeru. Tohle funguje jen za předpokladu, že tvůj router podporuje UPnP a že je UPnP povolené.</translation>
     </message>
     <message>
@@ -1056,8 +1058,8 @@
         <translation>Namapovat port přes &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Bitcoin Core network through a SOCKS5 proxy.</source>
-        <translation>Připojí se do bitcoinové core sítě přes SOCKS5 proxy.</translation>
+        <source>Connect to the Title Network through a SOCKS5 proxy.</source>
+        <translation>Připojí se do Title Network sítě přes SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1096,8 +1098,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Bitcoin Core network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Připojí se do bitcoinové core sítě přes SOCKS5 proxy vyhrazenou pro skryté služby v Tor síti.</translation>
+        <source>Connect to the Title Network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Připojí se do Title Network sítě přes SOCKS5 proxy vyhrazenou pro skryté služby v Tor síti.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
@@ -1195,8 +1197,8 @@
         <translation>Formulář</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin Core network after a connection is established, but this process has not completed yet.</source>
-        <translation>Zobrazené informace nemusí být aktuální. Tvá peněženka se automaticky sesynchronizuje s bitcoinovou core sítí, jakmile se s ní spojí. Zatím ale ještě není synchronizace dokončena.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Title Network after a connection is established, but this process has not completed yet.</source>
+        <translation>Zobrazené informace nemusí být aktuální. Tvá peněženka se automaticky sesynchronizuje s Title Network sítí, jakmile se s ní spojí. Zatím ale ještě není synchronizace dokončena.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1286,8 +1288,8 @@
         <translation>Neplatná platební adresa %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Bitcoin Core address or malformed URI parameters.</source>
-        <translation>Nepodařilo se analyzovat URI! Důvodem může být neplatná bitcoinová core adresa nebo poškozené parametry URI.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Title Network address or malformed URI parameters.</source>
+        <translation>Nepodařilo se analyzovat URI! Důvodem může být neplatná Title Network adresa nebo poškozené parametry URI.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1380,8 +1382,8 @@
         <translation>Částka</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin Core address (e.g. %1)</source>
-        <translation>Zadej bitcoinovou core adresu (např. %1)</translation>
+        <source>Enter a Title Network address (e.g. %1)</source>
+        <translation>Zadej Title Network adresu (např. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1804,8 +1806,8 @@
         <translation>&amp;Recyklovat již existující adresy (nedoporučeno)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Bitcoin Core network.</source>
-        <translation>Volitelná zpráva, která se připojí k platebnímu požadavku a která se zobrazí, když se požadavek otevře. Poznámka: tahle zpráva se neposílá s platbou po bitcoinové core síti.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Title Network.</source>
+        <translation>Volitelná zpráva, která se připojí k platebnímu požadavku a která se zobrazí, když se požadavek otevře. Poznámka: tahle zpráva se neposílá s platbou po Title Network síti.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2201,8 +2203,8 @@
         <translation><numerusform>Potvrzování by podle odhadu mělo začít během %n bloku.</numerusform><numerusform>Potvrzování by podle odhadu mělo začít během %n bloků.</numerusform><numerusform>Potvrzování by podle odhadu mělo začít během %n bloků.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid Bitcoin Core address</source>
-        <translation>Upozornění: Neplatná bitcoinová core adresa</translation>
+        <source>Warning: Invalid Title Network address</source>
+        <translation>Upozornění: Neplatná Title Network adresa</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2244,7 +2246,7 @@
         <translation>Tohle je normální platba.</translation>
     </message>
     <message>
-        <source>The Bitcoin Core address to send the payment to</source>
+        <source>The Title Network address to send the payment to</source>
         <translation>Bitcoinová Core adresa příjemce</translation>
     </message>
     <message>
@@ -2264,8 +2266,8 @@
         <translation>Smaž tento záznam</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less bitcoins core than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Poplatek se odečte od posílané částky. Příjemce tak dostane méně bitcoinů core, než zadáš do pole Částka. Pokud vybereš více příjemců, tak se poplatek rovnoměrně rozloží.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less TNET than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Poplatek se odečte od posílané částky. Příjemce tak dostane méně TNET, než zadáš do pole Částka. Pokud vybereš více příjemců, tak se poplatek rovnoměrně rozloží.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2288,8 +2290,8 @@
         <translation>Zadej označení této adresy; obojí se ti pak uloží do adresáře</translation>
     </message>
     <message>
-        <source>A message that was attached to the %1 URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin Core network.</source>
-        <translation>Zpráva, která byla připojena k %1 URI a která se ti pro přehled uloží k transakci. Poznámka: Tahle zpráva se neposílá s platbou po bitcoinové core síti.</translation>
+        <source>A message that was attached to the %1 URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Title Network.</source>
+        <translation>Zpráva, která byla připojena k %1 URI a která se ti pro přehled uloží k transakci. Poznámka: Tahle zpráva se neposílá s platbou po Title Network síti.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2333,11 +2335,11 @@
         <translation>&amp;Podepiš zprávu</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive bitcoins core sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Podepsáním zprávy/smlouvy svými adresami můžeš prokázat, že jsi na ně schopen přijmout bitcoiny core. Buď opatrný a nepodepisuj nic vágního nebo náhodného; například při phishingových útocích můžeš být lákán, abys něco takového podepsal. Podepisuj pouze naprosto úplná a detailní prohlášení, se kterými souhlasíš.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive TNET sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Podepsáním zprávy/smlouvy svými adresami můžeš prokázat, že jsi na ně schopen přijmout TNET. Buď opatrný a nepodepisuj nic vágního nebo náhodného; například při phishingových útocích můžeš být lákán, abys něco takového podepsal. Podepisuj pouze naprosto úplná a detailní prohlášení, se kterými souhlasíš.</translation>
     </message>
     <message>
-        <source>The Bitcoin Core address to sign the message with</source>
+        <source>The Title Network address to sign the message with</source>
         <translation>Bitcoinová Core adresa, kterou se zpráva podepíše</translation>
     </message>
     <message>
@@ -2369,8 +2371,8 @@
         <translation>Zkopíruj tento podpis do schránky</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Bitcoin Core address</source>
-        <translation>Podepiš zprávu, čímž prokážeš, že jsi vlastníkem této bitcoinové core adresy</translation>
+        <source>Sign the message to prove you own this Title Network address</source>
+        <translation>Podepiš zprávu, čímž prokážeš, že jsi vlastníkem této Title Network adresy</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2393,12 +2395,12 @@
         <translation>K ověření podpisu zprávy zadej adresu příjemce, zprávu (ověř si, že správně kopíruješ zalomení řádků, mezery, tabulátory apod.) a podpis. Dávej pozor na to, abys nezkopíroval do podpisu víc, než co je v samotné podepsané zprávě, abys nebyl napálen man-in-the-middle útokem. Poznamenejme však, že takto lze pouze prokázat, že podepisující je schopný na dané adrese přijmout platbu, ale není možnéprokázat, že odeslal jakoukoli transakci!</translation>
     </message>
     <message>
-        <source>The Bitcoin Core address the message was signed with</source>
+        <source>The Title Network address the message was signed with</source>
         <translation>Bitcoinová Core adresa, kterou je zpráva podepsána</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Bitcoin Core address</source>
-        <translation>Ověř zprávu, aby ses ujistil, že byla podepsána danou bitcoinovou core adresou</translation>
+        <source>Verify the message to ensure it was signed with the specified Title Network address</source>
+        <translation>Ověř zprávu, aby ses ujistil, že byla podepsána danou Title Network adresou</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2988,7 +2990,7 @@
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>title-network</name>
     <message>
         <source>Options:</source>
         <translation>Možnosti:</translation>
@@ -3058,8 +3060,8 @@
         <translation>Nemohu spustit HTTP server. Detaily viz v debug.log.</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Core</translation>
+        <source>Bitcoin</source>
+        <translation>Title Network</translation>
     </message>
     <message>
         <source>The %s developers</source>
