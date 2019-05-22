@@ -35,7 +35,7 @@ PGP keys used for signing Bitcoin ABCD [Gitian release](/doc/release-process.md)
 Scripts and notes for Mac builds. 
 
 ### [RPM](/contrib/rpm) ###
-RPM spec file for building bitcoin-abcd on RPM based distributions
+RPM spec file for building title-network on RPM based distributions
 
 ### [Gitian-build](/contrib/gitian-build.sh) ###
 Script for running full Gitian builds.

@@ -27,12 +27,12 @@ NOTE: Building with Qt4 is still supported, however, could result in a broken UI
 Build Title Network
 --------------------------
 
-1. Clone the Title Network source code and cd into `bitcoin-cored`
+1. Clone the Title Network source code and cd into `title-network`
 
-        git clone github.com/bitcoin-cored/bitcoin-cored
-        cd bitcoin-cored
+        git clone github.com/title-network/title-network
+        cd title-network
 
-2.  Build bitcoin-abcd:
+2.  Build title-network:
 
     Configure and build the headless bitcoin binaries as well as the GUI (if Qt is found).
 
