@@ -1,10 +1,11 @@
 <!--- Remove sections that do not apply -->
 
-This issue tracker is only for technical issues related to bitcoin-core.
+This issue tracker is only for technical issues related to title-network.
 
 General bitcoin questions and/or support requests and are best directed to the [Bitcoin StackExchange](https://bitcoin.stackexchange.com).
+General Title Network questions and/or support requests and are best directed to the [Title Network Discord](https://discord.gg/cwpeGPk).
 
-For reporting security issues, please read instructions at [https://thebitcoincore.org/](https://bitcoincore.org/).
+For reporting security issues, please read instructions at [https://title.network/](https://title.network/).
 
 ### Describe the issue
 
