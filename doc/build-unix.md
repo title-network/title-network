@@ -209,7 +209,7 @@ If you need to build Boost yourself:
 
 Security
 --------
-To help make your bitcoin-abcd installation more secure by making certain attacks
+To help make your title-network installation more secure by making certain attacks
 impossible to exploit even if a vulnerability is found, binaries are hardened by default.
 This can be disabled with:
 
@@ -242,7 +242,7 @@ Hardening enables the following features:
 
 * Non-executable Stack
     If the stack is executable then trivial stack based buffer overflow exploits are possible if
-    vulnerable buffers are found. By default, bitcoin-abcd should be built with a non-executable stack
+    vulnerable buffers are found. By default, title-network should be built with a non-executable stack
     but if one of the libraries it uses asks for an executable stack or someone makes a mistake
     and uses a compiler extension which requires an executable stack, it will silently build an
     executable without the non-executable stack protection.
@@ -258,7 +258,7 @@ Hardening enables the following features:
 
 Disable-wallet mode
 --------------------
-When the intention is to run only a P2P node without a wallet, bitcoin-abcd may 
+When the intention is to run only a P2P node without a wallet, title-network may 
 be compiled in disable-wallet mode with:
 
     ./configure --disable-wallet
