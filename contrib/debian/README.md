@@ -15,7 +15,7 @@ To install:
 
 If you build yourself, you will either need to modify the paths in
 the .desktop file or copy or symlink your title-qt binary to `/usr/bin`
-and the `../../share/pixmaps/bitcoin128.png` to `/usr/share/pixmaps`
+and the `../../share/pixmaps/title128.png` to `/usr/share/pixmaps`
 
 title-qt.protocol (KDE)
 

@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
 <TS language="da" version="2.1">
 <context>
     <name>AddressBookPage</name>
@@ -43,11 +45,11 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>Vælg adresse at sende bitcoins core til</translation>
+        <translation>Vælg adresse at sende TNET til</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>Vælg adresse at modtage bitcoins core med</translation>
+        <translation>Vælg adresse at modtage TNET med</translation>
     </message>
     <message>
         <source>C&amp;hoose</source>
@@ -62,12 +64,12 @@
         <translation>Modtagelsesadresser</translation>
     </message>
     <message>
-        <source>These are your Bitcoin Core addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Disse er dine Bitcoin Core-adresser til afsendelse af betalinger. Tjek altid beløb og modtagelsesadresse, inden du sender bitcoins core.</translation>
+        <source>These are your Title Network addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Disse er dine Title Network-adresser til afsendelse af betalinger. Tjek altid beløb og modtagelsesadresse, inden du sender TNET.</translation>
     </message>
     <message>
-        <source>These are your Bitcoin Core addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dette er dine Bitcoin Core-adresser til modtagelse af betalinger. Det anbefales at bruge en ny modtagelsesadresse for hver transaktion.</translation>
+        <source>These are your Title Network addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dette er dine Title Network-adresser til modtagelse af betalinger. Det anbefales at bruge en ny modtagelsesadresse for hver transaktion.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -180,8 +182,8 @@
         <translation>Tegnebog krypteret</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins core from being stolen by malware infecting your computer.</source>
-        <translation>%1 vil nu lukke for at færdiggøre krypteringsprocessen. Husk at kryptering af din tegnebog kan ikke beskytte dine Bitcoin Core fuldt ud mod at blive stjålet af eventuel malware, der måtte have inficeret din computer.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your TNET from being stolen by malware infecting your computer.</source>
+        <translation>%1 vil nu lukke for at færdiggøre krypteringsprocessen. Husk at kryptering af din tegnebog kan ikke beskytte dine TNET fuldt ud mod at blive stjålet af eventuel malware, der måtte have inficeret din computer.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -338,8 +340,8 @@
         <translation>Genindekserer blokke på disken…</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin Core address</source>
-        <translation>Send bitcoins core til en Bitcoin Core-adresse</translation>
+        <source>Send coins to a Title Network address</source>
+        <translation>Send TNET til en Title Network-adresse</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -363,7 +365,7 @@
     </message>
     <message>
         <source>Bitcoin</source>
-        <translation>Bitcoin Core</translation>
+        <translation>Title Network</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -390,12 +392,12 @@
         <translation>Kryptér de private nøgler, der hører til din tegnebog</translation>
     </message>
     <message>
-        <source>Sign messages with your Bitcoin Core addresses to prove you own them</source>
-        <translation>Signér beskeder med dine Bitcoin Core-adresser for at bevise, at de tilhører dig</translation>
+        <source>Sign messages with your Title Network addresses to prove you own them</source>
+        <translation>Signér beskeder med dine Title Network-adresser for at bevise, at de tilhører dig</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Bitcoin Core addresses</source>
-        <translation>Verificér beskeder for at sikre, at de er signeret med de angivne Bitcoin Core-adresser</translation>
+        <source>Verify messages to ensure they were signed with specified Title Network addresses</source>
+        <translation>Verificér beskeder for at sikre, at de er signeret med de angivne Title Network-adresser</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -434,8 +436,8 @@
         <translation>Tilvalg for &amp;kommandolinje</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Bitcoin Core network</source>
-        <translation><numerusform>%n aktiv forbindelse til Bitcoin Core-netværket</numerusform><numerusform>%n aktive forbindelser til Bitcoin Core-netværket</numerusform></translation>
+        <source>%n active connection(s) to Title Network network</source>
+        <translation><numerusform>%n aktiv forbindelse til Title Network-netværket</numerusform><numerusform>%n aktive forbindelser til Title Network-netværket</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -478,8 +480,8 @@
         <translation>Opdateret</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Bitcoin Core command-line options</source>
-        <translation>Vis %1 hjælpebesked for at få en liste over mulige tilvalg for Bitcoin Core kommandolinje</translation>
+        <source>Show the %1 help message to get a list with possible Title Network command-line options</source>
+        <translation>Vis %1 hjælpebesked for at få en liste over mulige tilvalg for Title Network kommandolinje</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -548,8 +550,8 @@
         <translation>Tegnebog er &lt;b&gt;krypteret&lt;/b&gt; og i øjeblikket &lt;b&gt;låst&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Bitcoin Core can no longer continue safely and will quit.</source>
-        <translation>Der opstod en fatal fejl. Bitcoin Core kan ikke længere fortsætte sikkert og vil afslutte.</translation>
+        <source>A fatal error occurred. Title Network can no longer continue safely and will quit.</source>
+        <translation>Der opstod en fatal fejl. Title Network kan ikke længere fortsætte sikkert og vil afslutte.</translation>
     </message>
 </context>
 <context>
@@ -742,8 +744,8 @@
         <translation>Redigér afsendelsesadresse</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Bitcoin Core address.</source>
-        <translation>Den indtastede adresse “%1” er ikke en gyldig Bitcoin Core-adresse.</translation>
+        <source>The entered address "%1" is not a valid Title Network address.</source>
+        <translation>Den indtastede adresse “%1” er ikke en gyldig Title Network-adresse.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -851,8 +853,8 @@
         <translation>Siden dette er første gang, programmet startes, kan du vælge, hvor %1 skal gemme sin data.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Bitcoin Core block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>%1 vil downloade og gemme et kopi af Bitcoin Core-blokkæden. Mindst %2 GB data vil blive gemt i denne mappe, og den vil vokse over tid. Tegnebogen vil også blive gemt i denne mappe.</translation>
+        <source>%1 will download and store a copy of the Title Network block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>%1 vil downloade og gemme et kopi af Title Network-blokkæden. Mindst %2 GB data vil blive gemt i denne mappe, og den vil vokse over tid. Tegnebogen vil også blive gemt i denne mappe.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -886,12 +888,12 @@
         <translation>Formular</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcoin core network, as detailed below.</source>
-        <translation>Nylige transaktioner er måske ikke synlige endnu, og derfor kan din tegnebogs saldo være ukorrekt. Denne information vil være korrekt, når din tegnebog er færdig med at synkronisere med bitcoin core-netværket, som detaljerne herunder viser.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the Title Network, as detailed below.</source>
+        <translation>Nylige transaktioner er måske ikke synlige endnu, og derfor kan din tegnebogs saldo være ukorrekt. Denne information vil være korrekt, når din tegnebog er færdig med at synkronisere med bitcoin Title Network, som detaljerne herunder viser.</translation>
     </message>
     <message>
-        <source>Attempting to spend bitcoins core that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>Forsøg på at bruge bitcoin core, som er indeholdt i endnu-ikke-viste transaktioner, accepteres ikke af netværket.</translation>
+        <source>Attempting to spend TNET that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Forsøg på at bruge TNET, som er indeholdt i endnu-ikke-viste transaktioner, accepteres ikke af netværket.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1048,16 +1050,16 @@
         <translation>&amp;Brug ubekræftede byttepenge</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin Core client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Åbn automatisk Bitcoin Core-klientens port på routeren. Dette virker kun, når din router understøtter UPnP, og UPnP er aktiveret.</translation>
+        <source>Automatically open the Title Network client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Åbn automatisk Title Network-klientens port på routeren. Dette virker kun, når din router understøtter UPnP, og UPnP er aktiveret.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Konfigurér port vha. &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Bitcoin Core network through a SOCKS5 proxy.</source>
-        <translation>Forbind til Bitcoin Core-netværket gennem en SOCKS5-proxy.</translation>
+        <source>Connect to the Title Network network through a SOCKS5 proxy.</source>
+        <translation>Forbind til Title Network-netværket gennem en SOCKS5-proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1096,8 +1098,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Bitcoin Core network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Forbind til Bitcoin Core-netværket gennem en separat SOCKS5-proxy for skjulte Tor-tjenester.</translation>
+        <source>Connect to the Title Network network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Forbind til Title Network-netværket gennem en separat SOCKS5-proxy for skjulte Tor-tjenester.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
@@ -1145,7 +1147,7 @@
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Vælg standard for underopdeling af enhed, som skal vises i brugergrænsefladen og ved afsendelse af bitcoins core.</translation>
+        <translation>Vælg standard for underopdeling af enhed, som skal vises i brugergrænsefladen og ved afsendelse af TNET.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1195,8 +1197,8 @@
         <translation>Formular</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin Core network after a connection is established, but this process has not completed yet.</source>
-        <translation>Den viste information kan være forældet. Din tegnebog synkroniserer automatisk med Bitcoin Core-netværket, når en forbindelse etableres, men denne proces er ikke gennemført endnu.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Title Network network after a connection is established, but this process has not completed yet.</source>
+        <translation>Den viste information kan være forældet. Din tegnebog synkroniserer automatisk med Title Network-netværket, når en forbindelse etableres, men denne proces er ikke gennemført endnu.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1286,8 +1288,8 @@
         <translation>Ugyldig betalingsadresse %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Bitcoin Core address or malformed URI parameters.</source>
-        <translation>URI kan ikke tolkes! Dette kan skyldes en ugyldig Bitcoin Core-adresse eller forkert udformede URL-parametre.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Title Network address or malformed URI parameters.</source>
+        <translation>URI kan ikke tolkes! Dette kan skyldes en ugyldig Title Network-adresse eller forkert udformede URL-parametre.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1380,8 +1382,8 @@
         <translation>Beløb</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin Core address (e.g. %1)</source>
-        <translation>Indtast en Bitcoin Core-adresse (fx %1)</translation>
+        <source>Enter a Title Network address (e.g. %1)</source>
+        <translation>Indtast en Title Network-adresse (fx %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1804,8 +1806,8 @@
         <translation>&amp;Genbrug en eksisterende modtagelsesadresse (anbefales ikke)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Bitcoin Core network.</source>
-        <translation>En valgfri besked, der føjes til betalingsanmodningen, og som vil vises, når anmodningen åbnes. Bemærk: Beskeden vil ikke sendes sammen med betalingen over Bitcoin Core-netværket.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Title Network network.</source>
+        <translation>En valgfri besked, der føjes til betalingsanmodningen, og som vil vises, når anmodningen åbnes. Bemærk: Beskeden vil ikke sendes sammen med betalingen over Title Network-netværket.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1958,7 +1960,7 @@
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>Send bitcoins core</translation>
+        <translation>Send TNET</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -2037,8 +2039,8 @@
         <translation>total mindst</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for bitcoin core transactions than the network can process.</source>
-        <translation>Det er helt fint kun at betale det minimale gebyr, så længe den totale transaktionsvolumen er mindre end den plads, der er tilgængelig i blokkene. Men vær opmærksom på, at dette kan ende ud i transaktioner, der aldrig bliver bekræftet, når der bliver større forespørgsel efter bitcoin core-transaktioner, end hvad netværket kan bearbejde.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Title Network transactions than the network can process.</source>
+        <translation>Det er helt fint kun at betale det minimale gebyr, så længe den totale transaktionsvolumen er mindre end den plads, der er tilgængelig i blokkene. Men vær opmærksom på, at dette kan ende ud i transaktioner, der aldrig bliver bekræftet, når der bliver større forespørgsel efter Title Network-transaktioner, end hvad netværket kan bearbejde.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -2150,7 +2152,7 @@
     </message>
     <message>
         <source>Confirm send coins</source>
-        <translation>Bekræft afsendelse af bitcoins core</translation>
+        <translation>Bekræft afsendelse af TNET</translation>
     </message>
     <message>
         <source>The recipient address is not valid. Please recheck.</source>
@@ -2201,8 +2203,8 @@
         <translation><numerusform>Bekræftelse estimeret til at begynde om %n blok.</numerusform><numerusform>Bekræftelse estimeret til at begynde om %n blokke.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid Bitcoin Core address</source>
-        <translation>Advarsel: Ugyldig Bitcoin Core-adresse</translation>
+        <source>Warning: Invalid Title Network address</source>
+        <translation>Advarsel: Ugyldig Title Network-adresse</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2244,8 +2246,8 @@
         <translation>Dette er en normal betaling.</translation>
     </message>
     <message>
-        <source>The Bitcoin Core address to send the payment to</source>
-        <translation>Bitcoin Core-adresse, som betalingen skal sendes til</translation>
+        <source>The Title Network address to send the payment to</source>
+        <translation>Title Network-adresse, som betalingen skal sendes til</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2264,8 +2266,8 @@
         <translation>Fjern denne indgang</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less bitcoins core than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Gebyret vil blive trukket fra det sendte beløb. Modtageren vil modtage færre bitcoin core, end du indtaster i beløbfeltet. Hvis flere modtagere vælges, vil gebyret deles ligeligt.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less TNET than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Gebyret vil blive trukket fra det sendte beløb. Modtageren vil modtage færre TNET, end du indtaster i beløbfeltet. Hvis flere modtagere vælges, vil gebyret deles ligeligt.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2288,8 +2290,8 @@
         <translation>Indtast et mærkat for denne adresse for at føje den til listen over brugte adresser</translation>
     </message>
     <message>
-        <source>A message that was attached to the %1 URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin Core network.</source>
-        <translation>En besked, som blev føjet til “%1”-URI'en, som vil gemmes med transaktionen til din reference. Bemærk: Denne besked vil ikke blive sendt over Bitcoin Core-netværket.</translation>
+        <source>A message that was attached to the %1 URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Title Network network.</source>
+        <translation>En besked, som blev føjet til “%1”-URI'en, som vil gemmes med transaktionen til din reference. Bemærk: Denne besked vil ikke blive sendt over Title Network-netværket.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2333,12 +2335,12 @@
         <translation>&amp;Singér besked</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive bitcoins core sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Du kan signere beskeder/aftaler med dine adresser for at bevise, at du kan modtage bitcoin core, der bliver sendt til adresserne. Vær forsigtig med ikke at signere noget vagt eller tilfældigt, da eventuelle phishing-angreb kan snyde dig til at overlade din identitet til dem. Signér kun fuldt ud detaljerede udsagn, som du er enig i.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive TNET sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Du kan signere beskeder/aftaler med dine adresser for at bevise, at du kan modtage TNET, der bliver sendt til adresserne. Vær forsigtig med ikke at signere noget vagt eller tilfældigt, da eventuelle phishing-angreb kan snyde dig til at overlade din identitet til dem. Signér kun fuldt ud detaljerede udsagn, som du er enig i.</translation>
     </message>
     <message>
-        <source>The Bitcoin Core address to sign the message with</source>
-        <translation>Bitcoin Core-adresse, som beskeden skal signeres med</translation>
+        <source>The Title Network address to sign the message with</source>
+        <translation>Title Network-adresse, som beskeden skal signeres med</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2369,8 +2371,8 @@
         <translation>Kopiér den nuværende signatur til systemets udklipsholder</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Bitcoin Core address</source>
-        <translation>Signér denne besked for at bevise, at Bitcoin Core-adressen tilhører dig</translation>
+        <source>Sign the message to prove you own this Title Network address</source>
+        <translation>Signér denne besked for at bevise, at Title Network-adressen tilhører dig</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2393,12 +2395,12 @@
         <translation>Indtast modtagerens adresse, besked (vær sikker på at kopiere linjeskift, mellemrum, tabuleringer, etc. præcist) og signatur herunder for at verificere beskeden. Vær forsigtig med ikke at læse noget ud fra signaturen, som ikke står i selve beskeden, for at undgå at blive snydt af et eventuelt man-in-the-middle-angreb. Bemærk, at dette kun beviser, at den signerende person kan modtage med adressen; det kan ikke bevise hvem der har sendt en given transaktion!</translation>
     </message>
     <message>
-        <source>The Bitcoin Core address the message was signed with</source>
-        <translation>Bitcoin Core-adressen, som beskeden blev signeret med</translation>
+        <source>The Title Network address the message was signed with</source>
+        <translation>Title Network-adressen, som beskeden blev signeret med</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Bitcoin Core address</source>
-        <translation>Verificér beskeden for at sikre, at den er signeret med den angivne Bitcoin Core-adresse</translation>
+        <source>Verify the message to ensure it was signed with the specified Title Network address</source>
+        <translation>Verificér beskeden for at sikre, at den er signeret med den angivne Title Network-adresse</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2623,7 +2625,7 @@
     </message>
     <message>
         <source>Generated coins must mature %1 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to "not accepted" and it won't be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Minede bitcoins core skal modne %1 blokke, før de kan bruges. Da du genererede denne blok, blev den transmitteret til netværket for at blive føjet til blokkæden. Hvis det ikke lykkes at få den i kæden, vil dens tilstand ændres til “ikke accepteret”, og den vil ikke kunne bruges. Dette kan ske nu og da, hvis en anden knude udvinder en blok inden for nogle få sekunder fra din.</translation>
+        <translation>Minede TNET skal modne %1 blokke, før de kan bruges. Da du genererede denne blok, blev den transmitteret til netværket for at blive føjet til blokkæden. Hvis det ikke lykkes at få den i kæden, vil dens tilstand ændres til “ikke accepteret”, og den vil ikke kunne bruges. Dette kan ske nu og da, hvis en anden knude udvinder en blok inden for nogle få sekunder fra din.</translation>
     </message>
     <message>
         <source>Debug information</source>
@@ -2949,7 +2951,7 @@
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation>Send bitcoins core</translation>
+        <translation>Send TNET</translation>
     </message>
 </context>
 <context>
@@ -2988,7 +2990,7 @@
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>title-network</name>
     <message>
         <source>Options:</source>
         <translation>Indstillinger:</translation>
@@ -3059,7 +3061,7 @@
     </message>
     <message>
         <source>Bitcoin</source>
-        <translation>Bitcoin Core</translation>
+        <translation>Title Network</translation>
     </message>
     <message>
         <source>The %s developers</source>

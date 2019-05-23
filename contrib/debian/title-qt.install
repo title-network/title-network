@@ -1,6 +1,6 @@
 usr/local/bin/title-qt usr/bin
-share/pixmaps/bitcoin32.xpm usr/share/pixmaps
-share/pixmaps/bitcoin16.xpm usr/share/pixmaps
-share/pixmaps/bitcoin128.png usr/share/pixmaps
+share/pixmaps/title32.xpm usr/share/pixmaps
+share/pixmaps/title16.xpm usr/share/pixmaps
+share/pixmaps/title128.png usr/share/pixmaps
 debian/title-qt.desktop usr/share/applications
 debian/title-qt.protocol usr/share/kde4/services/

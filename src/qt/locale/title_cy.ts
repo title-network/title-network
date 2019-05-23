@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
 <TS language="cy" version="2.1">
 <context>
     <name>AddressBookPage</name>
@@ -115,7 +117,7 @@
     </message>
     <message>
         <source>Bitcoin</source>
-        <translation>Bitcoin Core</translation>
+        <translation>Title Network</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -478,14 +480,14 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>title-network</name>
     <message>
         <source>Options:</source>
         <translation>Opsiynau:</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Craidd Bitcoin Core</translation>
+        <source>Title Network</source>
+        <translation>Craidd Title Network</translation>
     </message>
     <message>
         <source>Information</source>
