@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
 <TS language="el_GR" version="2.1">
 <context>
     <name>AddressBookPage</name>
@@ -162,8 +164,8 @@
         <translation>Φόρτωση ευρετηρίου μπλοκ στον σκληρο δισκο...</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin Core address</source>
-        <translation>Στείλε νομίσματα σε μια διεύθυνση Bitcoin Core</translation>
+        <source>Send coins to a Title Network address</source>
+        <translation>Στείλε νομίσματα σε μια διεύθυνση Title Network</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -187,7 +189,7 @@
     </message>
     <message>
         <source>Bitcoin</source>
-        <translation>Bitcoin Core</translation>
+        <translation>Title Network</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -214,12 +216,12 @@
         <translation>Κρυπτογραφήστε τα ιδιωτικά κλειδιά που ανήκουν στο πορτοφόλι σας </translation>
     </message>
     <message>
-        <source>Sign messages with your Bitcoin Core addresses to prove you own them</source>
+        <source>Sign messages with your Title Network addresses to prove you own them</source>
         <translation>Υπογράψτε ένα μήνυμα για να βεβαιώσετε πως είστε ο κάτοχος αυτής της διεύθυνσης</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Bitcoin Core addresses</source>
-        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως ανήκει μια συγκεκριμένη διεύθυνση Bitcoin Core</translation>
+        <source>Verify messages to ensure they were signed with specified Title Network addresses</source>
+        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως ανήκει μια συγκεκριμένη διεύθυνση Title Network</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -628,16 +630,16 @@
         <translation>&amp;Ξόδεμα μη επικυρωμένων ρέστων</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin Core client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Αυτόματο άνοιγμα των θυρών Bitcoin Core στον δρομολογητή. Λειτουργεί μόνο αν ο δρομολογητής σας υποστηρίζει τη λειτουργία UPnP.</translation>
+        <source>Automatically open the Title Network client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Αυτόματο άνοιγμα των θυρών Title Network στον δρομολογητή. Λειτουργεί μόνο αν ο δρομολογητής σας υποστηρίζει τη λειτουργία UPnP.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Απόδοση θυρών με χρήστη &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Bitcoin Core network through a SOCKS5 proxy.</source>
-        <translation>Σύνδεση στο Bitcoin Core δίκτυο μέσω διαμεσολαβητή SOCKS5 (π.χ. για σύνδεση μέσω Tor)</translation>
+        <source>Connect to the Title Network network through a SOCKS5 proxy.</source>
+        <translation>Σύνδεση στο Title Network δίκτυο μέσω διαμεσολαβητή SOCKS5 (π.χ. για σύνδεση μέσω Tor)</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -732,8 +734,8 @@
         <translation>Φόρμα</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin Core network after a connection is established, but this process has not completed yet.</source>
-        <translation>Οι πληροφορίες που εμφανίζονται μπορεί να είναι ξεπερασμένες. Το πορτοφόλι σας συγχρονίζεται αυτόματα με το δίκτυο Bitcoin Core μετά από μια σύνδεση, αλλά αυτή η διαδικασία δεν έχει ακόμη ολοκληρωθεί. </translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Title Network network after a connection is established, but this process has not completed yet.</source>
+        <translation>Οι πληροφορίες που εμφανίζονται μπορεί να είναι ξεπερασμένες. Το πορτοφόλι σας συγχρονίζεται αυτόματα με το δίκτυο Title Network μετά από μια σύνδεση, αλλά αυτή η διαδικασία δεν έχει ακόμη ολοκληρωθεί. </translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -813,8 +815,8 @@
         <translation>Ποσό</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin Core address (e.g. %1)</source>
-        <translation>Εισάγετε μια διεύθυνση Bitcoin Core (π.χ. %1)</translation>
+        <source>Enter a Title Network address (e.g. %1)</source>
+        <translation>Εισάγετε μια διεύθυνση Title Network (π.χ. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1245,8 +1247,8 @@
         <translation>Αυτή είναι μια απλή πληρωμή.</translation>
     </message>
     <message>
-        <source>The Bitcoin Core address to send the payment to</source>
-        <translation>Η διεύθυνση Bitcoin Core που θα σταλεί η πληρωμή</translation>
+        <source>The Title Network address to send the payment to</source>
+        <translation>Η διεύθυνση Title Network που θα σταλεί η πληρωμή</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -1302,8 +1304,8 @@
         <translation>&amp;Υπογραφή Μηνύματος</translation>
     </message>
     <message>
-        <source>The Bitcoin Core address to sign the message with</source>
-        <translation>Διεύθυνση Bitcoin Core που θα σταλεί το μήνυμα</translation>
+        <source>The Title Network address to sign the message with</source>
+        <translation>Διεύθυνση Title Network που θα σταλεί το μήνυμα</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1334,8 +1336,8 @@
         <translation>Αντέγραφη της επιλεγμενης διεύθυνσης στο πρόχειρο του συστηματος</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Bitcoin Core address</source>
-        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως σας ανήκει μια συγκεκριμένη διεύθυνση Bitcoin Core</translation>
+        <source>Sign the message to prove you own this Title Network address</source>
+        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως σας ανήκει μια συγκεκριμένη διεύθυνση Title Network</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1354,12 +1356,12 @@
         <translation>&amp;Επιβεβαίωση μηνύματος</translation>
     </message>
     <message>
-        <source>The Bitcoin Core address the message was signed with</source>
-        <translation>Διεύθυνση Bitcoin Core η οποία το μήνυμα έχει υπογραφεί</translation>
+        <source>The Title Network address the message was signed with</source>
+        <translation>Διεύθυνση Title Network η οποία το μήνυμα έχει υπογραφεί</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Bitcoin Core address</source>
-        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως υπογραφθηκε απο μια συγκεκριμένη διεύθυνση Bitcoin Core</translation>
+        <source>Verify the message to ensure it was signed with the specified Title Network address</source>
+        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως υπογραφθηκε απο μια συγκεκριμένη διεύθυνση Title Network</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1417,7 +1419,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>title-network</name>
     <message>
         <source>Options:</source>
         <translation>Επιλογές:</translation>
@@ -1443,8 +1445,8 @@
         <translation>Εκτέλεση στο παρασκήνιο κι αποδοχή εντολών</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Core</translation>
+        <source>Title Network</source>
+        <translation>Title Network</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
