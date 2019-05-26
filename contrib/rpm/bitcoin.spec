@@ -24,18 +24,18 @@ URL:		https://title.network/
 Source0:	https://github.com/title-network/title-network/releases/download/v%{version}/title-network-%{version}.tar.gz
 Source1:	http://download.oracle.com/berkeley-db/db-%{bdbv}.NC.tar.gz
 
-Source10:	https://raw.githubusercontent.com/bitcoin/bitcoin/v%{version}/contrib/debian/examples/bitcoin.conf
+Source10:	https://raw.githubusercontent.com/title-network/title-network/v%{version}/contrib/debian/examples/title.conf
 
 #man pages
-Source20:	https://raw.githubusercontent.com/bitcoin/bitcoin/v%{version}/doc/man/bitcoind.1
-Source21:	https://raw.githubusercontent.com/bitcoin/bitcoin/v%{version}/doc/man/bitcoin-cli.1
-Source22:	https://raw.githubusercontent.com/bitcoin/bitcoin/v%{version}/doc/man/bitcoin-qt.1
+Source20:	https://raw.githubusercontent.com/title-network/title-network/v%{version}/doc/man/titled.1
+Source21:	https://raw.githubusercontent.com/title-network/title-network/v%{version}/doc/man/title-cli.1
+Source22:	https://raw.githubusercontent.com/title-network/title-network/v%{version}/doc/man/title-qt.1
 
 #selinux
-Source30:	https://raw.githubusercontent.com/bitcoin/bitcoin/v%{version}/contrib/rpm/bitcoin.te
-# Source31 - what about bitcoin-tx and bench_bitcoin ???
-Source31:	https://raw.githubusercontent.com/bitcoin/bitcoin/v%{version}/contrib/rpm/bitcoin.fc
-Source32:	https://raw.githubusercontent.com/bitcoin/bitcoin/v%{version}/contrib/rpm/bitcoin.if
+Source30:	https://raw.githubusercontent.com/title-network/title-network/v%{version}/contrib/rpm/bitcoin.te
+# Source31 - what about title-tx and bench_title ???
+Source31:	https://raw.githubusercontent.com/title-network/title-network/v%{version}/contrib/rpm/bitcoin.fc
+Source32:	https://raw.githubusercontent.com/title-network/title-network/v%{version}/contrib/rpm/bitcoin.if
 
 Source100:	https://upload.wikimedia.org/wikipedia/commons/4/46/Bitcoin.svg
 
@@ -200,7 +200,7 @@ OPTIONS=""
 
 # System service defaults.
 # Don't change these unless you know what you're doing.
-CONFIG_FILE="%{_sysconfdir}/tnet/title.conf"
+CONFIG_FILE="%{_sysconfdir}/title/title.conf"
 DATA_DIR="%{_localstatedir}/lib/title"
 PID_FILE="/run/titled/titled.pid"
 EOF
