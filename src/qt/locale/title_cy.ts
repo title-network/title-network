@@ -116,7 +116,7 @@
         <translation>Newid y cyfrinymadrodd a ddefnyddiwyd ar gyfer amgryptio'r waled</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
+        <source>Title Network</source>
         <translation>Title Network</translation>
     </message>
     <message>
@@ -487,7 +487,7 @@
     </message>
     <message>
         <source>Title Network</source>
-        <translation>Craidd Title Network</translation>
+        <translation>Title Network</translation>
     </message>
     <message>
         <source>Information</source>

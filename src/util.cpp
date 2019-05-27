@@ -516,13 +516,13 @@ void PrintExceptionContinue(const std::exception *pex, const char *pszThread) {
 
 boost::filesystem::path GetDefaultDataDir() {
     namespace fs = boost::filesystem;
-// Windows < Vista: C:\Documents and Settings\Username\Application Data\TNET
-// Windows >= Vista: C:\Users\Username\AppData\Roaming\TNET
-// Mac: ~/Library/Application Support/TNET
-// Unix: ~/.tnet
+// Windows < Vista: C:\Documents and Settings\Username\Application Data\Title
+// Windows >= Vista: C:\Users\Username\AppData\Roaming\Title
+// Mac: ~/Library/Application Support/Title
+// Unix: ~/.title
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "TNET";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "Title";
 #else
     fs::path pathRet;
     char *pszHome = getenv("HOME");
@@ -532,10 +532,10 @@ boost::filesystem::path GetDefaultDataDir() {
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/TNET";
+    return pathRet / "Library/Application Support/Title";
 #else
     // Unix
-    return pathRet / ".tnet";
+    return pathRet / ".title";
 #endif
 #endif
 }

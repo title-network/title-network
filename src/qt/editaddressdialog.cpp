@@ -91,7 +91,7 @@ void EditAddressDialog::accept() {
             case AddressTableModel::INVALID_ADDRESS:
                 QMessageBox::warning(this, windowTitle(),
                                      tr("The entered address \"%1\" is not a "
-                                        "valid Bitcoin Core address.")
+                                        "valid Title Network address.")
                                          .arg(ui->addressEdit->text()),
                                      QMessageBox::Ok, QMessageBox::Ok);
                 break;
