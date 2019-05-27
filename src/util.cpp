@@ -883,7 +883,9 @@ std::string CopyrightHolders(const std::string &strPrefix) {
     // is not removed by accident.
     if (strprintf(COPYRIGHT_HOLDERS, COPYRIGHT_HOLDERS_SUBSTITUTION)
             .find("Bitcoin Core") == std::string::npos) {
-        strCopyrightHolders += "\n" + strPrefix + "The Bitcoin Core developers";
+        strCopyrightHolders += "\n" + strPrefix + "The Bitcoin Core developers"
+            + "\n" + "Copyright (C) 2018-2019 "
+            + "Bitcoin Clashic/Bitcoin Core Sq/Title Network Developers";
     }
     return strCopyrightHolders;
 }
