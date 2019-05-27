@@ -76,7 +76,7 @@ src/qt/test/moc*.cpp
 *.qm
 Makefile
 title-qt
-Title-Qt.app
+TitleNetwork-Qt.app
 
 # Unit-tests
 Makefile.test
