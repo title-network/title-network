@@ -46,11 +46,11 @@ QString BitcoinUnits::name(int unit) {
 QString BitcoinUnits::description(int unit) {
     switch (unit) {
         case TNET:
-            return QString("Bitcoins");
+            return QString("TNET");
         case mTNET:
-            return QString("Milli-Bitcoins (1 / 1" THIN_SP_UTF8 "000)");
+            return QString("Milli-TNET (1 / 1" THIN_SP_UTF8 "000)");
         case uTNET:
-            return QString("Micro-Bitcoins (1 / 1" THIN_SP_UTF8
+            return QString("Micro-TNET (1 / 1" THIN_SP_UTF8
                            "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");

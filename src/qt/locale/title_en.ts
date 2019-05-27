@@ -460,7 +460,7 @@
     </message>
     <message>
         <location line="+517"/>
-        <source>Bitcoin</source>
+        <source>Title Network</source>
         <translation>Title Network</translation>
     </message>
     <message>
@@ -2342,7 +2342,7 @@
     <message>
         <location line="+14"/>
         <location line="+23"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Title Network network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Title Network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2962,7 +2962,7 @@
     </message>
     <message>
         <location line="+47"/>
-        <source>A message that was attached to the %1 URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Title Network network.</source>
+        <source>A message that was attached to the %1 URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Title Network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

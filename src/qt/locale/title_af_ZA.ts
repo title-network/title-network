@@ -216,7 +216,7 @@
         <translation>&amp;Opsies</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
+        <source>Title Network</source>
         <translation>Title Network</translation>
     </message>
     <message>

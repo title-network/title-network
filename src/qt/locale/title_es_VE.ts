@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
 <TS language="es_VE" version="2.1">
 <context>
     <name>AddressBookPage</name>
@@ -114,8 +116,8 @@
         <translation>Reindexando bloques en el disco...</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin Core address</source>
-        <translation>Enviar monedas a una dirección Bitcoin Core</translation>
+        <source>Send coins to a Title Network address</source>
+        <translation>Enviar monedas a una dirección Title Network</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -130,8 +132,8 @@
         <translation>Abre la consola de depuración y diágnostico</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
-        <translation>Bitcoin Core</translation>
+        <source>Title Network</source>
+        <translation>Title Network</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -158,12 +160,12 @@
         <translation>Encriptar las llaves privadas que pertenecen a tu billetera</translation>
     </message>
     <message>
-        <source>Sign messages with your Bitcoin Core addresses to prove you own them</source>
-        <translation>Firma mensajes con tus direcciones Bitcoin Core para probar que eres dueño de ellas</translation>
+        <source>Sign messages with your Title Network addresses to prove you own them</source>
+        <translation>Firma mensajes con tus direcciones Title Network para probar que eres dueño de ellas</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Bitcoin Core addresses</source>
-        <translation>Verificar mensajes para asegurar que estaban firmados con direcciones Bitcoin Core especificas</translation>
+        <source>Verify messages to ensure they were signed with specified Title Network addresses</source>
+        <translation>Verificar mensajes para asegurar que estaban firmados con direcciones Title Network especificas</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -582,7 +584,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>title-network</name>
     <message>
         <source>Options:</source>
         <translation>Opciones:</translation>
@@ -608,8 +610,8 @@
         <translation>Correr en segundo plano como daemon y aceptar comandos</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Core</translation>
+        <source>Title Network</source>
+        <translation>Title Network</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>

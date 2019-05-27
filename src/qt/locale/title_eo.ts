@@ -240,7 +240,7 @@
         <translation>&amp;Kontroli mesaĝon...</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
+        <source>Title Network</source>
         <translation>Title Network</translation>
     </message>
     <message>

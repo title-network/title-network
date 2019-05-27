@@ -170,8 +170,8 @@
         <translation>Potvrď zašifrování peněženky</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS CORE&lt;/b&gt;!</source>
-        <translation>Upozornění: Pokud si zašifruješ peněženku a ztratíš či zapomeneš heslo, &lt;b&gt;PŘIJDEŠ O VŠECHNY BITCOINY CORE&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR TNET&lt;/b&gt;!</source>
+        <translation>Upozornění: Pokud si zašifruješ peněženku a ztratíš či zapomeneš heslo, &lt;b&gt;PŘIJDEŠ O VŠECHNY TNET&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -341,7 +341,7 @@
     </message>
     <message>
         <source>Send coins to a Title Network address</source>
-        <translation>Pošli mince na Bitcoinovou Core adresu</translation>
+        <translation>Pošli mince na Title Network adresu</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -364,7 +364,7 @@
         <translation>&amp;Ověř zprávu...</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
+        <source>Title Network</source>
         <translation>Title Network</translation>
     </message>
     <message>
@@ -481,7 +481,7 @@
     </message>
     <message>
         <source>Show the %1 help message to get a list with possible Title Network command-line options</source>
-        <translation>Seznam argumentů Bitcoinu Core pro příkazovou řádku získáš v nápovědě %1</translation>
+        <translation>Seznam argumentů Title Network pro příkazovou řádku získáš v nápovědě %1</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -889,7 +889,7 @@
     </message>
     <message>
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the Title Network, as detailed below.</source>
-        <translation>Nedávné transakce ještě nemusí být vidět, takže stav tvého účtu nemusí být platný. Jakmile se však tvá peněženka dosynchronizuje s bitcoinovou sítí (viz informace níže), tak už bude stav správně.</translation>
+        <translation>Nedávné transakce ještě nemusí být vidět, takže stav tvého účtu nemusí být platný. Jakmile se však tvá peněženka dosynchronizuje s Title Network sítí (viz informace níže), tak už bude stav správně.</translation>
     </message>
     <message>
         <source>Attempting to spend TNET that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
@@ -2039,8 +2039,8 @@
         <translation>přinejmenším</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for bitcoin transactions than the network can process.</source>
-        <translation>Platit jen minimální poplatek je v pořádku, pokud je zrovna méně transakcí než místa v blocích. Ale počítej s tím, že to také může skončit transakcí, která nikdy nebude potvrzena, pokud je větší poptávka po bitcoinových transakcích, než síť zvládne zpracovat.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for TNET transactions than the network can process.</source>
+        <translation>Platit jen minimální poplatek je v pořádku, pokud je zrovna méně transakcí než místa v blocích. Ale počítej s tím, že to také může skončit transakcí, která nikdy nebude potvrzena, pokud je větší poptávka po TNET transakcích, než síť zvládne zpracovat.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -2247,7 +2247,7 @@
     </message>
     <message>
         <source>The Title Network address to send the payment to</source>
-        <translation>Bitcoinová Core adresa příjemce</translation>
+        <translation>Title Network adresa příjemce</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2340,7 +2340,7 @@
     </message>
     <message>
         <source>The Title Network address to sign the message with</source>
-        <translation>Bitcoinová Core adresa, kterou se zpráva podepíše</translation>
+        <translation>Title Network adresa, kterou se zpráva podepíše</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2396,7 +2396,7 @@
     </message>
     <message>
         <source>The Title Network address the message was signed with</source>
-        <translation>Bitcoinová Core adresa, kterou je zpráva podepsána</translation>
+        <translation>Title Network adresa, kterou je zpráva podepsána</translation>
     </message>
     <message>
         <source>Verify the message to ensure it was signed with the specified Title Network address</source>
@@ -3060,7 +3060,7 @@
         <translation>Nemohu spustit HTTP server. Detaily viz v debug.log.</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
+        <source>Title Network</source>
         <translation>Title Network</translation>
     </message>
     <message>
