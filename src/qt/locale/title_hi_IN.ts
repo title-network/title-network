@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
 <TS language="hi_IN" version="2.1">
 <context>
     <name>AddressBookPage</name>
@@ -79,8 +81,8 @@
         <translation>पहचान शब्द/अक्षर जो वॉलेट एनक्रिपशन के लिए इस्तेमाल किया है उसे बदलिए!</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
-        <translation>बीटकोइन</translation>
+        <source>Title Network</source>
+        <translation>शीर्षक नेटवर्क</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -405,7 +407,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>title-network</name>
     <message>
         <source>Options:</source>
         <translation>विकल्प:</translation>
