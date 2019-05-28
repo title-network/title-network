@@ -160,7 +160,7 @@ bool AppInit(int argc, char *argv[]) {
         }
         if (GetBoolArg("-daemon", false)) {
 #if HAVE_DECL_DAEMON
-            fprintf(stdout, "Title Netork server starting\n");
+            fprintf(stdout, "Title Network server starting\n");
 
             // Daemonize
             if (daemon(1, 0)) {
