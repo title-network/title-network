@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
 <TS language="ky" version="2.1">
 <context>
     <name>AddressBookPage</name>
@@ -38,8 +40,8 @@
         <translation>Билдирүүнү &amp;текшерүү...</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
-        <translation>Bitcoin Core</translation>
+        <source>Title Network</source>
+        <translation>Title Network</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -334,7 +336,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>title-network</name>
     <message>
         <source>Information</source>
         <translation>Маалымат</translation>
