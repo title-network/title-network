@@ -366,6 +366,7 @@ libtitle_util_a_SOURCES = \
 
 if GLIBC_BACK_COMPAT
 libtitle_util_a_SOURCES += compat/glibc_compat.cpp
+AM_LDFLAGS += $(COMPAT_LDFLAGS)
 endif
 
 # cli: shared between title-cli and title-qt
