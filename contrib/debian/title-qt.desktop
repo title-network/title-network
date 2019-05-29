@@ -8,6 +8,6 @@ Comment[tr]=Title Network, eşten eşe kriptografik sanal para birimi
 Exec=title-qt %u
 Terminal=false
 Type=Application
-Icon=bitcoin128
+Icon=title128
 MimeType=x-scheme-handler/titlenetwork;
 Categories=Office;Finance;
