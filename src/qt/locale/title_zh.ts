@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
 <TS language="zh" version="2.1">
 <context>
     <name>AddressBookPage</name>
@@ -107,7 +109,7 @@
         <translation>仅支付全额的%1</translation>
     </message>
     <message>
-        <source>Warning: Invalid Bitcoin Core address</source>
+        <source>Warning: Invalid Title Network address</source>
         <translation>警告：比特币地址无效</translation>
     </message>
     </context>
@@ -166,7 +168,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>title-network</name>
     <message>
         <source>Transaction too large for fee policy</source>
         <translation>根据费率标准，本次转账超额</translation>

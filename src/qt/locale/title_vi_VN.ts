@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
 <TS language="vi_VN" version="2.1">
 <context>
     <name>AddressBookPage</name>
@@ -166,8 +168,8 @@
         <translation>Đánh chỉ số (indexing) lại các khối (blocks) trên ổ đĩa ...</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin Core address</source>
-        <translation>Gửi coins đến tài khoản Bitcoin Core</translation>
+        <source>Send coins to a Title Network address</source>
+        <translation>Gửi coins đến tài khoản Title Network</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -186,8 +188,8 @@
         <translation>&amp;Tin nhắn xác thực</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
-        <translation>Bitcoin Core</translation>
+        <source>Title Network</source>
+        <translation>Title Network</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -214,12 +216,12 @@
         <translation>Mã hoá các khoá bí mật trong Ví của bạn.</translation>
     </message>
     <message>
-        <source>Sign messages with your Bitcoin Core addresses to prove you own them</source>
-        <translation>Dùng địa chỉ Bitcoin Core của bạn ký các tin nhắn để xác minh những nội dung tin nhắn đó là của bạn.</translation>
+        <source>Sign messages with your Title Network addresses to prove you own them</source>
+        <translation>Dùng địa chỉ Title Network của bạn ký các tin nhắn để xác minh những nội dung tin nhắn đó là của bạn.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Bitcoin Core addresses</source>
-        <translation>Kiểm tra các tin nhắn để chắc chắn rằng chúng được ký bằng các địa chỉ Bitcoin Core xác định.</translation>
+        <source>Verify messages to ensure they were signed with specified Title Network addresses</source>
+        <translation>Kiểm tra các tin nhắn để chắc chắn rằng chúng được ký bằng các địa chỉ Title Network xác định.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -516,8 +518,8 @@
         <translation>Ví</translation>
     </message>
     <message>
-        <source>Connect to the Bitcoin Core network through a SOCKS5 proxy.</source>
-        <translation>Kết nối đến máy chủ Bitcoin Core thông qua SOCKS5 proxy.</translation>
+        <source>Connect to the Title Network through a SOCKS5 proxy.</source>
+        <translation>Kết nối đến máy chủ Title Network thông qua SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -992,14 +994,14 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>title-network</name>
     <message>
         <source>Options:</source>
         <translation>Lựa chọn:</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Core</translation>
+        <source>Title Network</source>
+        <translation>Title Network</translation>
     </message>
     <message>
         <source>(default: %u)</source>

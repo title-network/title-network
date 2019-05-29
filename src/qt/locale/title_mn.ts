@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
 <TS language="mn" version="2.1">
 <context>
     <name>AddressBookPage</name>
@@ -126,7 +128,7 @@
         <translation>Оношилгоо ба засварын консолыг онгойлго</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
+        <source>Title Network</source>
         <translation>Биткойн</translation>
     </message>
     <message>
@@ -546,7 +548,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>title-network</name>
     <message>
         <source>Options:</source>
         <translation>Сонголтууд:</translation>
