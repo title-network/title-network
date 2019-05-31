@@ -253,7 +253,7 @@ bool CBlockTreeDB::LoadBlockIndexGuts(
         pindexNew->nStatus = diskindex.nStatus;
         pindexNew->nTx = diskindex.nTx;
 
-        if (!CheckProofOfWork(pindexNew->GetBlockPoWHash(), pindexNew->nBits,
+        if (!CheckProofOfWork(pindexNew->GetBlockPoWHash(Params().GetConsensus().powBlake2Height), pindexNew->nBits,
                               Params().GetConsensus()))
             return error("LoadBlockIndex(): CheckProofOfWork failed: %s",
                          pindexNew->ToString());

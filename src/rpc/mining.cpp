@@ -141,7 +141,7 @@ static UniValue generateBlocks(const Config &config,
             IncrementExtraNonce(config, pblock, chainActive.Tip(), nExtraNonce);
         }
         while (nMaxTries > 0 && pblock->nNonce < nInnerLoopCount &&
-               !CheckProofOfWork(pblock->GetPoWHash(nHeight+1), pblock->nBits,
+               !CheckProofOfWork(pblock->GetPoWHash(nHeight+1, Params().GetConsensus().powBlake2Height), pblock->nBits,
                                  Params().GetConsensus())) {
             ++pblock->nNonce;
             --nMaxTries;
