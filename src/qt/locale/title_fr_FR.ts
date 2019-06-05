@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
 <TS language="fr_FR" version="2.1">
 <context>
     <name>AddressBookPage</name>
@@ -218,8 +220,8 @@
         <translation>Réindexer les blocs sur le disque...</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin Core address</source>
-        <translation>Envoyer des pièces à une adresse Bitcoin Core</translation>
+        <source>Send coins to a Title Network address</source>
+        <translation>Envoyer des pièces à une adresse Title Network</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -242,8 +244,8 @@
         <translation>&amp;Vérification du message</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
-        <translation>Bitcoin Core</translation>
+        <source>Title Network</source>
+        <translation>Title Network</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -270,8 +272,8 @@
         <translation>Crypter les clé privées qui appartiennent votre portefeuille</translation>
     </message>
     <message>
-        <source>Sign messages with your Bitcoin Core addresses to prove you own them</source>
-        <translation>Signer vos messages avec vos adresses Bitcoin Core pour prouver que vous les détenez</translation>
+        <source>Sign messages with your Title Network addresses to prove you own them</source>
+        <translation>Signer vos messages avec vos adresses Title Network pour prouver que vous les détenez</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -306,8 +308,8 @@
         <translation>&amp;Options de ligne de commande</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Bitcoin Core network</source>
-        <translation><numerusform>%n connexion active au réseau Bitcoin Core</numerusform><numerusform>%n connexions actives au réseau Bitcoin Core</numerusform></translation>
+        <source>%n active connection(s) to Title Network</source>
+        <translation><numerusform>%n connexion active au réseau Title Network</numerusform><numerusform>%n connexions actives au réseau Title Network</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -684,8 +686,8 @@
         <translation>Expert</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin Core client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Ouvrir le port du client Bitcoin Core automatiquement sur le routeur. Cela ne fonctionne que si votre routeur supporte l'UPnP et si la fonctionnalité est activée.</translation>
+        <source>Automatically open the Title Network client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Ouvrir le port du client Title Network automatiquement sur le routeur. Cela ne fonctionne que si votre routeur supporte l'UPnP et si la fonctionnalité est activée.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -844,8 +846,8 @@
         <translation>Montant</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin Core address (e.g. %1)</source>
-        <translation>Entrer une adresse Bitcoin Core (e.g. %1)</translation>
+        <source>Enter a Title Network address (e.g. %1)</source>
+        <translation>Entrer une adresse Title Network (e.g. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1636,7 +1638,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>title-network</name>
     <message>
         <source>Options:</source>
         <translation>Options :</translation>
@@ -1662,8 +1664,8 @@
         <translation>Impossible de démarrer le serveur HTTP. Voir le journal de débogage pour plus de détails.</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Core</translation>
+        <source>Title Network</source>
+        <translation>Title Network</translation>
     </message>
     <message>
         <source>&lt;category&gt; can be:</source>

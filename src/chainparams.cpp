@@ -149,14 +149,16 @@ public:
         consensus.coreHardForkActivationTime = 1526852960;
 
         // Reject PROTOCOL_VERSION 80030 Time
-        // Jun 06, 2019 14:00:00 GMT Enforce PROTOCOL_VERSION=80050
-        consensus.enforceProtocolVersion80050Time = 1559815200;
+        // Human time (GMT): Sunday, June 2, 2019 11:00:00 PM. Enforce PROTOCOL_VERSION=80050
+        consensus.enforceProtocolVersion80050Time = 1559516400;
 
         // At this height we will hardfork to 1-minute blocks and 30-period DAA
         consensus.oneMinuteBlockHeight = 588672;
 
-        // At this height we will hardfork to Blake2b PoW algo
-        consensus.powBlake2Height = 735000;
+        // At this height we will hardfork to Blake2b PoW algo on mainnet
+        // June 3rd - June 17th depending on 3000 blocks per week trailing run rate or 10080
+        // blocks expected based on 1-min target.
+        consensus.powBlake2Height = 836750;
 
         // Take the amount of 10-minute blocks in this interval and add it
         // to the number of expected 1-minute blocks left in the orginal planned
@@ -208,6 +210,9 @@ public:
         // truevisionofsatoshi.com
         vSeeds.push_back(
             CDNSSeedData("clashic.org", "seeder-mainnet.clashic.org", true));
+        // CCGLLC - works on mainnet & testnet
+        vSeeds.push_back(
+            CDNSSeedData("bitcoin-rebooted.xyz", "tnetseed.bitcoin-rebooted.xyz", true));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<uint8_t>(1, 0);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<uint8_t>(1, 5);
@@ -357,8 +362,8 @@ public:
         // May, 21st hard fork
         consensus.coreHardForkActivationTime = 1526860800;
 
-        // Reject PROTOCOL_VERSION 80030 Time
-        consensus.enforceProtocolVersion80050Time = 1532581620;
+        // Reject PROTOCOL_VERSION 80030 Time. Wednesday, May 29, 2019 1:00:00 AM
+        consensus.enforceProtocolVersion80050Time = 1559091600;
  
         // At this height we will hardfork to 1-minute blocks and 30-period DAA
         consensus.oneMinuteBlockHeight = 160;
@@ -399,6 +404,9 @@ public:
         // bitcoincore.zone
         vSeeds.push_back(
             CDNSSeedData("bitcoincore.zone", "testnet-seeder.bitcoincore.zone", true));
+        // CCGLLC - works on mainnet & testnet
+        vSeeds.push_back(
+            CDNSSeedData("bitcoin-rebooted.xyz", "tnetseed.bitcoin-rebooted.xyz", true));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<uint8_t>(1, 111);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<uint8_t>(1, 196);

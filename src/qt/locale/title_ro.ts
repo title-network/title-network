@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
 <TS language="ro" version="2.1">
 <context>
     <name>AddressBookPage</name>
@@ -142,8 +144,8 @@
         <translation>Deschide &amp;URI...</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin Core address</source>
-        <translation>Trimite monedele către o adresă Bitcoin Core</translation>
+        <source>Send coins to a Title Network address</source>
+        <translation>Trimite monedele către o adresă Title Network</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -166,8 +168,8 @@
         <translation>&amp;Verifică mesajul...</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
-        <translation>Bitcoin Core</translation>
+        <source>Title Network</source>
+        <translation>Title Network</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -194,12 +196,12 @@
         <translation>Criptează cheile private care aparțin portofelului tău.</translation>
     </message>
     <message>
-        <source>Sign messages with your Bitcoin Core addresses to prove you own them</source>
-        <translation>Semnează mesajele cu adresa ta de Bitcoin Core pentru a face dovada că îți aparțin.</translation>
+        <source>Sign messages with your Title Network addresses to prove you own them</source>
+        <translation>Semnează mesajele cu adresa ta de Title Network pentru a face dovada că îți aparțin.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Bitcoin Core addresses</source>
-        <translation>Verifică mesajele cu scopul de a asigura faptul că au fost semnate cu adresa de Bitcoin Core specificată.</translation>
+        <source>Verify messages to ensure they were signed with specified Title Network addresses</source>
+        <translation>Verifică mesajele cu scopul de a asigura faptul că au fost semnate cu adresa de Title Network specificată.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -746,10 +748,10 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>title-network</name>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Core</translation>
+        <source>Title Network</source>
+        <translation>Title Network</translation>
     </message>
     <message>
         <source>Information</source>

@@ -75,7 +75,7 @@ std::unique_ptr<X509_STORE, X509StoreDeleter> certStore;
 //  data directory
 //
 static QString ipcServerName() {
-    QString name("BitcoinQt");
+    QString name("TitleQt");
 
     // Append a simple hash of the datadir
     // Note that GetDataDir(true) returns a different path for -testnet versus
@@ -433,7 +433,7 @@ void PaymentServer::handleURIOrFile(const QString &s) {
                 Q_EMIT message(
                     tr("URI handling"),
                     tr("URI cannot be parsed! This can be caused by an invalid "
-                       "Bitcoin Core address or malformed URI parameters."),
+                       "Title Network address or malformed URI parameters."),
                     CClientUIInterface::ICON_WARNING);
 
             return;
@@ -548,7 +548,7 @@ bool PaymentServer::processPaymentRequest(const PaymentRequestPlus &request,
             // Append destination address
             addresses.append(QString::fromStdString(EncodeDestination(dest)));
         } else if (!recipient.authenticatedMerchant.isEmpty()) {
-            // Unauthenticated payment requests to custom bitcoin addresses are
+            // Unauthenticated payment requests to custom Title Network addresses are
             // not supported
             // (there is no good way to tell the user where they are paying in a
             // way they'd
@@ -560,7 +560,7 @@ bool PaymentServer::processPaymentRequest(const PaymentRequestPlus &request,
             return false;
         }
 
-        // Bitcoin amounts are stored as (optional) uint64 in the protobuf
+        // TNET amounts are stored as (optional) uint64 in the protobuf
         // messages (see paymentrequest.proto), but CAmount is defined as
         // int64_t. Because of that we need to verify that amounts are in a
         // valid range and no overflow has happened.

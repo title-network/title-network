@@ -38,7 +38,7 @@ public:
 
     void ParseCommandLine(int argc, char **argv) {
         static const char *help =
-            "Bitcoin-core-seeder\n"
+            "Title-network-seeder\n"
             "Usage: %s -h <host> -n <ns> [-m <mbox>] [-t <threads>] [-p "
             "<port>]\n"
             "\n"
@@ -452,10 +452,10 @@ extern "C" void *ThreadStats(void *) {
 
 static const std::string mainnet_seeds[] = {
     "seeder.clashic.cash", "seeder.bitcoincore.zone", "seeder-mainnet.truevisionofsatoshi.com",
-    "",   "",    ""};
+    "tnetseed.bitcoin-rebooted.xyz",   "",    ""};
 static const std::string testnet_seeds[] = {
     "testnet-seeder.clashic.cash", "testnet-seeder.bitcoincore.zone",
-    "seeder-testnet.truevisionofsatoshi.com", "", "", ""};
+    "seeder-testnet.truevisionofsatoshi.com", "tnetseed.bitcoin-rebooted.xyz", "", ""};
 static const std::string *seeds = mainnet_seeds;
 
 extern "C" void *ThreadSeeder(void *) {

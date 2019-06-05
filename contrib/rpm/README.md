@@ -23,7 +23,7 @@ Sources 10-99 are for source files that are maintained in the
 the release tarball. Most of these will reside in the `contrib` sub-directory.
 
 Sources 10-19 should be reserved for miscellaneous configuration files.
-Currently only `Source10` is used, for the example `clashic.conf` file.
+Currently only `Source10` is used, for the example `title.conf` file.
 
 Sources 20-29 should be reserved for man pages. Currently only `Source20`
 through `Source23` are used.
@@ -91,7 +91,7 @@ assigned to them in the `touch` command that specifies the time stamp.
 
 ## SVG, PNG, and XPM Icons
 
-The `bitcoin.svg` file is from the source listed as `Source100`. It is used as
+The `title.svg` file is from the source listed as `Source100`. It is used as
 the source for the PNG and XPM files. The generated PNG and XPM files are given
 the same time stamp as the source SVG file as a means of indicating they are
 derived from it.
@@ -99,7 +99,7 @@ derived from it.
 ## Systemd
 
 This spec file assumes the target distribution uses systemd. That really only
-matters for the `bitcoin-server` package. At this point, most RPM based
+matters for the `title-server` package. At this point, most RPM based
 distributions that still receive vendor updates do in fact use systemd.
 
 The files to control the service are created in the RPM spec file itself using
@@ -112,7 +112,7 @@ command that specifies the time stamp.
 
 ## SELinux
 
-The `bitcoin-server` package should have SELinux support. How to properly do
+The `title-server` package should have SELinux support. How to properly do
 that *may* vary by distribution and version of distribution.
 
 The SELinux stuff in this RPM spec file *should* be correct for CentOS, RHEL,

@@ -1,5 +1,5 @@
 ---
-name: "bitcoin-cored-0.16.1-linux"
+name: "title-network-0.17.0-linux"
 enable_cache: true
 suites:
 - "xenial"
@@ -34,8 +34,8 @@ packages:
 - "libc6-dev:i386"
 - "libstdc++6:i386"
 remotes:
-- "url": "https://github.com/bitcoin-cored/bitcoin-cored.git"
-  "dir": "bitcoin-cored"
+- "url": "https://github.com/title-network/title-network.git"
+  "dir": "title-network"
 files: []
 script: |
 
@@ -119,7 +119,7 @@ script: |
   chmod +x ${WRAP_DIR}/${prog}
   done
 
-  cd bitcoin-cored
+  cd title-network
   BASEPREFIX=`pwd`/depends
   # Build dependencies for each host
   for i in $HOSTS; do
@@ -141,13 +141,13 @@ script: |
   ./autogen.sh
   CONFIG_SITE=${BASEPREFIX}/`echo "${HOSTS}" | awk '{print $1;}'`/share/config.site ./configure --prefix=/
   make dist
-  SOURCEDIST=`echo bitcoin-cored-*.tar.gz`
+  SOURCEDIST=`echo title-network-*.tar.gz`
   DISTNAME=`echo ${SOURCEDIST} | sed 's/.tar.*//'`
   # Correct tar file order
   mkdir -p temp
   pushd temp
   tar xf ../$SOURCEDIST
-  find bitcoin-cored-* | sort | tar --no-recursion --mode='u+rw,go+r-w,a+X' --owner=0 --group=0 -c -T - | gzip -9n > ../$SOURCEDIST
+  find title-network-* | sort | tar --no-recursion --mode='u+rw,go+r-w,a+X' --owner=0 --group=0 -c -T - | gzip -9n > ../$SOURCEDIST
   popd
 
   ORIGPATH="$PATH"

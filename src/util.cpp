@@ -516,13 +516,13 @@ void PrintExceptionContinue(const std::exception *pex, const char *pszThread) {
 
 boost::filesystem::path GetDefaultDataDir() {
     namespace fs = boost::filesystem;
-// Windows < Vista: C:\Documents and Settings\Username\Application Data\TNET
-// Windows >= Vista: C:\Users\Username\AppData\Roaming\TNET
-// Mac: ~/Library/Application Support/TNET
-// Unix: ~/.tnet
+// Windows < Vista: C:\Documents and Settings\Username\Application Data\Title
+// Windows >= Vista: C:\Users\Username\AppData\Roaming\Title
+// Mac: ~/Library/Application Support/Title
+// Unix: ~/.title
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "TNET";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "Title";
 #else
     fs::path pathRet;
     char *pszHome = getenv("HOME");
@@ -532,10 +532,10 @@ boost::filesystem::path GetDefaultDataDir() {
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/TNET";
+    return pathRet / "Library/Application Support/Title";
 #else
     // Unix
-    return pathRet / ".tnet";
+    return pathRet / ".title";
 #endif
 #endif
 }
@@ -883,7 +883,9 @@ std::string CopyrightHolders(const std::string &strPrefix) {
     // is not removed by accident.
     if (strprintf(COPYRIGHT_HOLDERS, COPYRIGHT_HOLDERS_SUBSTITUTION)
             .find("Bitcoin Core") == std::string::npos) {
-        strCopyrightHolders += "\n" + strPrefix + "The Bitcoin Core developers";
+        strCopyrightHolders += "\n" + strPrefix + "The Bitcoin Core developers"
+            + "\n" + "Copyright (C) 2018-2019 "
+            + "Bitcoin Clashic/Bitcoin Core Sq/Title Network Developers";
     }
     return strCopyrightHolders;
 }

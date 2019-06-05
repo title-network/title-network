@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
 <TS language="mk_MK" version="2.1">
 <context>
     <name>AddressBookPage</name>
@@ -138,7 +140,7 @@
         <translation>Повторно индексирање на блокови од дискот...</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin Core address</source>
+        <source>Send coins to a Title Network address</source>
         <translation>Испрати биткоини на Биткоин адреса</translation>
     </message>
     <message>
@@ -146,7 +148,7 @@
         <translation>&amp;Потврди порака...</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
+        <source>Title Network</source>
         <translation>Биткоин</translation>
     </message>
     <message>
@@ -572,13 +574,13 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>title-network</name>
     <message>
         <source>Options:</source>
         <translation>Опции:</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
+        <source>Title Network</source>
         <translation>Биткоин Core</translation>
     </message>
     <message>

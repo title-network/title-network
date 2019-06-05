@@ -13,7 +13,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"org.title.Title-Qt";
+        return @"org.title.TitleNetwork-Qt";
     } else {
         return [self __bundleIdentifier];
     }
