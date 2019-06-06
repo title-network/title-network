@@ -18,7 +18,7 @@ static const char *ppszTypeName[] = {
     "ERROR", "tx", "block",
 };
 
-uint8_t pchMessageStart[4] = {0xe3, 0xe1, 0xf3, 0xe8};
+uint8_t pchMessageStart[4] = {0x12, 0xb2, 0xdc, 0xf0};
 
 CMessageHeader::CMessageHeader() {
     memcpy(pchMessageStart, ::pchMessageStart, sizeof(pchMessageStart));
