@@ -72,8 +72,7 @@ class CAddress : public CService {
 public:
     CAddress();
     CAddress(CService ipIn,
-             uint64_t nServicesIn = NODE_NETWORK | NODE_BITCOIN_CORE |
-                 NODE_TITLE);
+             uint64_t nServicesIn = NODE_NETWORK | NODE_TITLE);
 
     void Init();
 

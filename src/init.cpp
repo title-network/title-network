@@ -1520,8 +1520,6 @@ bool AppInitParameterInteraction(Config &config) {
     if (GetBoolArg("-peerbloomfilters", DEFAULT_PEERBLOOMFILTERS))
         nLocalServices = ServiceFlags(nLocalServices | NODE_BLOOM);
 
-    nLocalServices = ServiceFlags(nLocalServices | NODE_BITCOIN_CORE);
-
     // Signal Title Network support.
     // TODO: remove some time after the hardfork when no longer needed
     // to differentiate the network nodes.
