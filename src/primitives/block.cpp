@@ -18,7 +18,7 @@ uint256 CBlockHeader::GetHash() const {
 }
 
 uint256 CBlockHeader::GetPoWHash(const int nHeight, const int nPowBlake2bHeight) const {
-    if (nHeight > nPowBlake2bHeight) {
+    if (nHeight >= nPowBlake2bHeight) {
         uint256 rc = Blake2::SerializeHash(*this);
         if (nVersion == 0x21000000) {
             arith_uint256 bnPoW;

@@ -158,7 +158,7 @@ public:
         // At this height we will hardfork to Blake2b PoW algo on mainnet
         // June 3rd - June 17th depending on 3000 blocks per week trailing run rate or 10080
         // blocks expected based on 1-min target.
-        consensus.powBlake2Height = 836750;
+        consensus.powBlake2Height = 836751;
 
         // Take the amount of 10-minute blocks in this interval and add it
         // to the number of expected 1-minute blocks left in the orginal planned
