@@ -106,6 +106,13 @@ uint32_t GetNextWorkRequired(const CBlockIndex *pindexPrev,
     }
 
     if (pindexPrev->GetMedianTimePast() >= params.coreHardForkActivationTime) {
+        // Get around fork difficulty from Sha256 to Blake2b
+        // (836750 and up + 1 >= 836751) && (836751 through 836760) < 836751 + 10)
+        if (((nHeight + 1) >= params.powBlake2Height) &&
+            ((nHeight + 1) < (params.powBlake2Height + 10))) {
+            return 0x1b0ffff0;
+        }
+
         return GetNextCoreWorkRequired(pindexPrev, pblock, params);
     }
     
