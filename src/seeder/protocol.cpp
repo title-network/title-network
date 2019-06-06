@@ -18,7 +18,7 @@ static const char *ppszTypeName[] = {
     "ERROR", "tx", "block",
 };
 
-uint8_t pchMessageStart[4] = {0xe3, 0xe1, 0xf3, 0xe8};
+uint8_t pchMessageStart[4] = {0x12, 0xb2, 0xdc, 0xf0};
 
 CMessageHeader::CMessageHeader() {
     memcpy(pchMessageStart, ::pchMessageStart, sizeof(pchMessageStart));
@@ -80,7 +80,7 @@ CAddress::CAddress(CService ipIn, uint64_t nServicesIn) : CService(ipIn) {
 }
 
 void CAddress::Init() {
-    nServices = NODE_NETWORK | NODE_BITCOIN_CORE |NODE_TITLE;
+    nServices = NODE_NETWORK |NODE_TITLE;
     nTime = 100000000;
 }
 

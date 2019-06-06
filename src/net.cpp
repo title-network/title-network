@@ -671,7 +671,6 @@ void CNode::copyStats(CNodeStats &stats) {
         X(nRecvBytes);
     }
     X(fWhitelisted);
-    X(fUsesCashMagic);
 
     // It is common for nodes with good ping times to suddenly become lagged,
     // due to a new block arriving or other large transfer. Merely reporting
@@ -2841,8 +2840,6 @@ CNode::CNode(NodeId idIn, ServiceFlags nLocalServicesIn,
     nPingUsecStart = 0;
     nPingUsecTime = 0;
     fPingQueued = false;
-    // set when etablishing connection
-    fUsesCashMagic = true;
     nMinPingUsecTime = std::numeric_limits<int64_t>::max();
     minFeeFilter = 0;
     lastSentFeeFilter = 0;
