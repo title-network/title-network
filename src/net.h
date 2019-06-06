@@ -516,7 +516,6 @@ public:
     uint64_t nRecvBytes;
     mapMsgCmdSize mapRecvBytesPerMsgCmd;
     bool fWhitelisted;
-    bool fUsesCashMagic;
     double dPingTime;
     double dPingWait;
     double dMinPing;
@@ -701,8 +700,6 @@ public:
     std::atomic<int64_t> nMinPingUsecTime;
     // Whether a ping is requested.
     std::atomic<bool> fPingQueued;
-    // Whether the node uses the bitcoin cash magic to communicate.
-    std::atomic<bool> fUsesCashMagic;
     // Minimum fee rate with which to filter inv's to this node
     Amount minFeeFilter;
     CCriticalSection cs_feeFilter;
@@ -754,8 +751,7 @@ public:
 
     const CMessageHeader::MessageStartChars &
     GetMagic(const CChainParams &params) const {
-        return fUsesCashMagic ? params.CashMessageStart()
-                              : params.MessageStart();
+        return params.MessageStart();
     }
 
     CService GetAddrLocal() const;
