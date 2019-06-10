@@ -276,7 +276,10 @@ public:
                                   "c961a8640b0de8b0df363d")},
                 // May 12, 2019
                 {819300, uint256S("0x00000000000000921ef5597db254728192397d6a40"
-                                  "eaf5b502da4a4538bedb5a")}}};
+                                  "eaf5b502da4a4538bedb5a")},
+                // June 10, 2019
+                {837750, uint256S("0x025c87c8ec7275cee0b493defa46337de840c84848"
+                                  "f85b7555b0987936104127")}}};
 
 
         // Data as of block
