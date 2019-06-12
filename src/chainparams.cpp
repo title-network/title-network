@@ -422,9 +422,6 @@ public:
                 // Bitcoin Core Testnet Genesis block
                 {0, uint256S("0x0273ed223240099a339d351d46054156fb6f3855c5db1c00c027"
                              "5c9b6f1d07de")},
-                // Just past 2nd new testnet halving
-                {100, uint256S("0x16420994c95bcf9afa2fab4a45af3cfb5dc6ac6103a40e2"
-                               "ffa48e7d327bdd7f")},
             }};
 
         // Data as of block
