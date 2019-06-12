@@ -358,17 +358,17 @@ public:
         // Aug, 1 hard fork
         consensus.uahfHeight = 1;
 
-        // May, 21st hard fork
+        // May, 21st hard fork - unused
         consensus.coreHardForkActivationTime = 1526860800;
 
-        // Reject PROTOCOL_VERSION 80030 Time. Wednesday, May 29, 2019 1:00:00 AM
+        // Reject PROTOCOL_VERSION 80030 Time. - unused
         consensus.enforceProtocolVersion80050Time = 1559091600;
  
         // At this height we will hardfork to 1-minute blocks and 30-period DAA
         consensus.oneMinuteBlockHeight = 160;
 
         // At this height we will hardfork to Blake2b PoW algo
-        consensus.powBlake2Height = 250000;
+        consensus.powBlake2Height = 500;
 
         pchMessageStart[0] = 0xde;
         pchMessageStart[1] = 0x9a;
