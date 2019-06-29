@@ -276,7 +276,10 @@ public:
                                   "c961a8640b0de8b0df363d")},
                 // May 12, 2019
                 {819300, uint256S("0x00000000000000921ef5597db254728192397d6a40"
-                                  "eaf5b502da4a4538bedb5a")}}};
+                                  "eaf5b502da4a4538bedb5a")},
+                // June 10, 2019
+                {837750, uint256S("0x025c87c8ec7275cee0b493defa46337de840c84848"
+                                  "f85b7555b0987936104127")}}};
 
 
         // Data as of block
@@ -355,17 +358,17 @@ public:
         // Aug, 1 hard fork
         consensus.uahfHeight = 1;
 
-        // May, 21st hard fork
+        // May, 21st hard fork - unused
         consensus.coreHardForkActivationTime = 1526860800;
 
-        // Reject PROTOCOL_VERSION 80030 Time. Wednesday, May 29, 2019 1:00:00 AM
+        // Reject PROTOCOL_VERSION 80030 Time. - unused
         consensus.enforceProtocolVersion80050Time = 1559091600;
  
         // At this height we will hardfork to 1-minute blocks and 30-period DAA
         consensus.oneMinuteBlockHeight = 160;
 
         // At this height we will hardfork to Blake2b PoW algo
-        consensus.powBlake2Height = 250000;
+        consensus.powBlake2Height = 500;
 
         pchMessageStart[0] = 0xde;
         pchMessageStart[1] = 0x9a;
@@ -419,9 +422,6 @@ public:
                 // Bitcoin Core Testnet Genesis block
                 {0, uint256S("0x0273ed223240099a339d351d46054156fb6f3855c5db1c00c027"
                              "5c9b6f1d07de")},
-                // Just past 2nd new testnet halving
-                {100, uint256S("0x16420994c95bcf9afa2fab4a45af3cfb5dc6ac6103a40e2"
-                               "ffa48e7d327bdd7f")},
             }};
 
         // Data as of block
