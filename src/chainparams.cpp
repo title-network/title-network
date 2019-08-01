@@ -160,6 +160,10 @@ public:
         // blocks expected based on 1-min target.
         consensus.powBlake2Height = 836751;
 
+        // At this height we will no longer have special handling of 0x21 verion blocks in
+        // CBlockHeader
+        consensus.plug0x21ExploitHeight = 915000;
+
         // Take the amount of 10-minute blocks in this interval and add it
         // to the number of expected 1-minute blocks left in the orginal planned
         // interval to figure out when to cut the block subsidy. It should be more 
@@ -370,6 +374,10 @@ public:
         // At this height we will hardfork to Blake2b PoW algo
         consensus.powBlake2Height = 500;
 
+        // At this height we will no longer have special handling of 0x21 verion blocks in
+        // CBlockHeader
+        consensus.plug0x21ExploitHeight = 30000;
+
         pchMessageStart[0] = 0xde;
         pchMessageStart[1] = 0x9a;
         pchMessageStart[2] = 0x86;
@@ -490,6 +498,10 @@ public:
 
         // Blake2b PoW is always enabled on regtest
         consensus.powBlake2Height = 0;
+
+        // At this height we will no longer have special handling of 0x21 verion blocks in
+        // CBlockHeader
+        consensus.plug0x21ExploitHeight = 0;
 
         pchMessageStart[0] = 0xb7;
         pchMessageStart[1] = 0xd7;

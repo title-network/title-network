@@ -63,6 +63,8 @@ struct Params {
     int oneMinuteBlockHeight;
     /** Block height at which we changed PoW to Blake2b */
     int powBlake2Height;
+    /** Block height at which 0x21 protocol version no longer accepted */
+    int plug0x21ExploitHeight;
 
     /**
      * Minimum blocks including miner confirmation of the total of 2016 blocks
