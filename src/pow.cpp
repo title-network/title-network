@@ -113,6 +113,14 @@ uint32_t GetNextWorkRequired(const CBlockIndex *pindexPrev,
             return 0x1b0ffff0;
         }
 
+        // Get around high difficulty from plugging 0x21 version block exploit
+        // If (915000 and up >= 915000) && (915000 through 915034) < 915000 + 35)
+        // if previous height between 915000 and 915034 next height target 1b013833
+        if ((nHeight >= params.plug0x21ExploitHeight) &&
+            (nHeight < (params.plug0x21ExploitHeight + 35))) {
+            return 0x1b013833;
+        }
+
         return GetNextCoreWorkRequired(pindexPrev, pblock, params);
     }
     
