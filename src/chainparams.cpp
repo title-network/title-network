@@ -162,7 +162,7 @@ public:
 
         // At this height we will no longer have special handling of 0x21 verion blocks in
         // CBlockHeader
-        consensus.plug0x21ExploitHeight = 915000;
+        consensus.plug0x21ExploitHeight = 912240;
 
         // Take the amount of 10-minute blocks in this interval and add it
         // to the number of expected 1-minute blocks left in the orginal planned
