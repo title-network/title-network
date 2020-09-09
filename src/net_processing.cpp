@@ -1337,9 +1337,6 @@ static void ProcessGetData(const Config &config, CNode *pfrom,
                 }
             }
 
-            // Track requests for our stuff.
-            GetMainSignals().Inventory(inv.hash);
-
             if (inv.type == MSG_BLOCK || inv.type == MSG_FILTERED_BLOCK ||
                 inv.type == MSG_CMPCT_BLOCK) {
                 break;
@@ -1837,9 +1834,6 @@ static bool ProcessMessage(const Config &config, CNode *pfrom,
                     pfrom->AskFor(inv);
                 }
             }
-
-            // Track requests for our stuff
-            GetMainSignals().Inventory(inv.hash);
         }
 
         if (!vToFetch.empty()) {

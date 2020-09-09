@@ -421,7 +421,6 @@ public:
     bool IsTrusted() const;
 
     int64_t GetTxTime() const;
-    int GetRequestCount() const;
 
     bool RelayWalletTransaction(CConnman *connman);
 
@@ -682,7 +681,6 @@ public:
     TxItems wtxOrdered;
 
     int64_t nOrderPosNext;
-    std::map<uint256, int> mapRequestCount;
 
     std::map<CTxDestination, CAddressBookData> mapAddressBook;
 
@@ -931,18 +929,9 @@ public:
 
     void UpdatedTransaction(const uint256 &hashTx) override;
 
-    void Inventory(const uint256 &hash) override {
-        LOCK(cs_wallet);
-        std::map<uint256, int>::iterator mi = mapRequestCount.find(hash);
-        if (mi != mapRequestCount.end()) {
-            (*mi).second++;
-        }
-    }
-
     void GetScriptForMining(std::shared_ptr<CReserveScript> &script) override;
     void ResetRequestCount(const uint256 &hash) override {
         LOCK(cs_wallet);
-        mapRequestCount[hash] = 0;
     };
 
     unsigned int GetKeyPoolSize() {

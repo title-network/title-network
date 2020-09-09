@@ -1570,45 +1570,6 @@ int64_t CWalletTx::GetTxTime() const {
     return n ? n : nTimeReceived;
 }
 
-int CWalletTx::GetRequestCount() const {
-    LOCK(pwallet->cs_wallet);
-
-    // Returns -1 if it wasn't being tracked.
-    int nRequests = -1;
-
-    if (IsCoinBase()) {
-        // Generated block.
-        if (!hashUnset()) {
-            std::map<uint256, int>::const_iterator mi =
-                pwallet->mapRequestCount.find(hashBlock);
-            if (mi != pwallet->mapRequestCount.end()) {
-                nRequests = (*mi).second;
-            }
-        }
-    } else {
-        // Did anyone request this transaction?
-        std::map<uint256, int>::const_iterator mi =
-            pwallet->mapRequestCount.find(GetId());
-        if (mi != pwallet->mapRequestCount.end()) {
-            nRequests = (*mi).second;
-
-            // How about the block it's in?
-            if (nRequests == 0 && !hashUnset()) {
-                std::map<uint256, int>::const_iterator _mi =
-                    pwallet->mapRequestCount.find(hashBlock);
-                if (_mi != pwallet->mapRequestCount.end()) {
-                    nRequests = (*_mi).second;
-                } else {
-                    // If it's in someone else's block it must have got out.
-                    nRequests = 1;
-                }
-            }
-        }
-    }
-
-    return nRequests;
-}
-
 void CWalletTx::GetAmounts(std::list<COutputEntry> &listReceived,
                            std::list<COutputEntry> &listSent, CAmount &nFee,
                            std::string &strSentAccount,
@@ -3049,9 +3010,6 @@ bool CWallet::CommitTransaction(CWalletTx &wtxNew, CReserveKey &reservekey,
         coin.BindWallet(this);
         NotifyTransactionChanged(this, coin.GetId(), CT_UPDATED);
     }
-
-    // Track how many getdata requests our transaction gets.
-    mapRequestCount[wtxNew.GetId()] = 0;
 
     if (fBroadcastTransactions) {
         // Broadcast

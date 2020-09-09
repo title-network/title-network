@@ -1,6 +1,6 @@
 group: deprecated-2017Q2
 sudo: required
-dist: trusty
+dist: xenial
 os: linux
 language: generic
 addons:

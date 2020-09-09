@@ -21,7 +21,7 @@ class CWalletTx;
 class TransactionStatus {
 public:
     TransactionStatus()
-        : countsForBalance(false), sortKey(""), matures_in(0), status(Offline),
+        : countsForBalance(false), sortKey(""), matures_in(0), status(Unconfirmed),
           depth(0), open_for(0), cur_num_blocks(-1) {}
 
     enum Status {
@@ -33,8 +33,6 @@ public:
         OpenUntilDate,
         /**< Transaction not yet final, waiting for block */
         OpenUntilBlock,
-        /**< Not sent to any other nodes **/
-        Offline,
         /**< Not yet mined into a block **/
         Unconfirmed,
         /**< Confirmed, but waiting for the recommended number of confirmations
@@ -47,9 +45,6 @@ public:
         /// Generated (mined) transactions
         /**< Mined but waiting for maturity */
         Immature,
-        /**< Transaction will likely not mature because no nodes have confirmed
-           */
-        MaturesWarning,
         /**< Mined but not accepted */
         NotAccepted
     };
