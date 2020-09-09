@@ -932,7 +932,6 @@ public:
     void GetScriptForMining(std::shared_ptr<CReserveScript> &script) override;
     void ResetRequestCount(const uint256 &hash) override {
         LOCK(cs_wallet);
-        mapRequestCount[hash] = 0;
     };
 
     unsigned int GetKeyPoolSize() {
