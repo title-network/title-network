@@ -1,7 +1,15 @@
-Title Network
+~~Title Network~~ --> Renamed back to the original "Bitcoin Clashic" brand
 =============
 
-https://title.network/
+Website
+https://bitcoin.clashic.cash
+~~https://title.network/~~
+
+Current Repo:
+https://github.com/Bitcoin-Clashic/wallet-official
+
+Latest releases:
+https://github.com/Bitcoin-Clashic/wallet-official/releases
 
 What is Title Network?
 ----------------------
